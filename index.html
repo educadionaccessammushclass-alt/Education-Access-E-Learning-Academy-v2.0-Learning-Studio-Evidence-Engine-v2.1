@@ -187,8 +187,619 @@ function defaultState(){
 const DB_NAME='EA_Academy_V21_Evidence';
 const DB_VERSION=1;
 const AUDIO_STORE='audio';
+/* =========================================================
+   PHASE 1 — LEARNER IDENTITY
+   Step 1: Permanent learner identity foundation
+   ========================================================= */
 
+const LEARNER_ID_KEY='EA_Academy_Learner_ID';
+
+function getPermanentLearnerId(){
+
+ const existing=
+  localStorage.getItem(LEARNER_ID_KEY);
+
+ if(existing){
+  return existing;
+ }
+
+ const id=
+  'EA-LRN-' +
+  Date.now().toString(36).toUpperCase() +
+  '-' +
+  Math.random()
+   .toString(36)
+   .slice(2,8)
+   .toUpperCase();
+
+ localStorage.setItem(
+  LEARNER_ID_KEY,
+  id
+ );
+
+ return id;
+}
+
+const PERMANENT_LEARNER_ID=
+ getPermanentLearnerId();
+ /* =========================================================
+   PHASE 1 — LEARNER IDENTITY
+   Step 2: Learner profile schema
+   ========================================================= */
+
+function defaultLearnerProfile(){
+
+ const now=
+  new Date().toISOString();
+
+ return {
+
+  learnerId:
+   PERMANENT_LEARNER_ID,
+
+  schemaVersion:1,
+
+  createdAt:now,
+
+  updatedAt:now,
+
+  identity:{
+
+   firstName:'Brielle',
+
+   middleName:'',
+
+   lastName:'',
+
+   preferredName:'Brielle',
+
+   accountRole:'learner'
+
+},
+  
+  previousSchool:{
+
+   schoolName:
+    'Fedha Primary School, Kawe',
+
+   levelCompleted:
+    'Grade 7',
+
+   completionYear:
+    '2026',
+
+   notes:''
+
+  },
+
+  programme:{
+
+   programmeName:
+    'Education Access E-Learning Academy',
+
+   currentLevel:
+    'Grade 7 → Form One',
+
+   programmePeriod:
+    'October–December 2026',
+
+   targetLevel:
+    'Form One',
+
+   targetDate:
+    'January 2027',
+
+   goal:
+    'January 2027 Form One readiness'
+
+  }
+
+ };
+
+ }
+ /* =========================================================
+   PHASE 1 — LEARNER IDENTITY
+   Step 3: Persistent learner profile
+   ========================================================= */
+
+const LEARNER_PROFILE_KEY=
+ 'EA_Academy_Learner_Profile';
+
+function loadLearnerProfile(){
+
+ try{
+
+  const raw=
+   localStorage.getItem(
+    LEARNER_PROFILE_KEY
+   );
+
+  if(raw){
+
+   return {
+    ...defaultLearnerProfile(),
+    ...JSON.parse(raw)
+   };
+
+  }
+
+ }catch(e){}
+
+ return defaultLearnerProfile();
+
+}
+
+function saveLearnerProfile(profile){
+
+ profile.updatedAt=
+  new Date().toISOString();
+
+ localStorage.setItem(
+  LEARNER_PROFILE_KEY,
+  JSON.stringify(profile)
+ );
+
+ }
 let state=load();
+
+const learnerProfile=
+ loadLearnerProfile();
+ /* =========================================================
+   PHASE 1 — LEARNER IDENTITY
+   Step 8: Academy learner registry
+   ========================================================= */
+
+const LEARNER_REGISTRY_KEY=
+ 'EA_Academy_Learner_Registry';
+
+function loadLearnerRegistry(){
+
+ try{
+
+  const raw=
+   localStorage.getItem(
+    LEARNER_REGISTRY_KEY
+   );
+
+  if(raw){
+
+   const registry=
+    JSON.parse(raw);
+
+   if(Array.isArray(registry)){
+    return registry;
+   }
+
+  }
+
+ }catch(e){}
+
+ return [];
+
+}
+
+function saveLearnerRegistry(registry){
+
+ localStorage.setItem(
+  LEARNER_REGISTRY_KEY,
+  JSON.stringify(registry)
+ );
+
+}
+
+function registerLearner(profile){
+
+ const registry=
+  loadLearnerRegistry();
+
+ const existing=
+  registry.find(
+   learner =>
+    learner.learnerId ===
+    profile.learnerId
+  );
+
+ if(existing){
+
+  return registry;
+
+ }
+
+ registry.push({
+
+  learnerId:
+   profile.learnerId,
+
+  preferredName:
+   profile.identity.preferredName,
+
+  accountRole:
+   profile.identity.accountRole,
+
+  school:
+   profile.previousSchool.schoolName,
+
+  currentLevel:
+   profile.programme.currentLevel,
+
+  registeredAt:
+   new Date().toISOString()
+
+ });
+
+ saveLearnerRegistry(registry);
+
+ return registry;
+
+}
+
+registerLearner(learnerProfile);
+ /* =========================================================
+   PHASE 1 — LEARNER IDENTITY
+   Step 9: Learner enrollment foundation
+   ========================================================= */
+
+function createLearnerProfile(profileData={}){
+
+ const learnerId=
+  'EA-LRN-' +
+  Date.now().toString(36).toUpperCase() +
+  '-' +
+  Math.random()
+   .toString(36)
+   .slice(2,8)
+   .toUpperCase();
+
+ const now=
+  new Date().toISOString();
+
+ const profile={
+
+  learnerId:learnerId,
+
+  schemaVersion:1,
+
+  createdAt:now,
+
+  updatedAt:now,
+
+  identity:{
+
+   firstName:
+    profileData.firstName || '',
+
+   middleName:
+    profileData.middleName || '',
+
+   lastName:
+    profileData.lastName || '',
+
+   preferredName:
+    profileData.preferredName ||
+    profileData.firstName ||
+    '',
+
+   accountRole:'learner'
+
+  },
+
+  parentGuardian:{
+
+   guardianId:
+    profileData.guardianId || '',
+
+   name:
+    profileData.guardianName || '',
+
+   relationship:
+    profileData.relationship ||
+    'Parent / Guardian',
+
+   phone:
+    profileData.guardianPhone || '',
+
+   email:
+    profileData.guardianEmail || '',
+
+   linkedLearnerIds:[
+    learnerId
+   ]
+
+  },
+
+  previousSchool:{
+
+   schoolName:
+    profileData.schoolName || '',
+
+   levelCompleted:
+    profileData.levelCompleted || '',
+
+   completionYear:
+    profileData.completionYear || '',
+
+   notes:''
+
+  },
+
+  programme:{
+
+   programmeName:
+    profileData.programmeName ||
+    'Education Access E-Learning Academy',
+
+   currentLevel:
+    profileData.currentLevel || '',
+
+   programmePeriod:
+    profileData.programmePeriod || '',
+
+   targetLevel:
+    profileData.targetLevel || '',
+
+   targetDate:
+    profileData.targetDate || '',
+
+   goal:
+    profileData.goal || ''
+
+  }
+
+ };
+
+ const registry=
+  loadLearnerRegistry();
+
+ registry.push({
+
+  learnerId:
+   profile.learnerId,
+
+  preferredName:
+   profile.identity.preferredName,
+
+  accountRole:
+   profile.identity.accountRole,
+
+  school:
+   profile.previousSchool.schoolName,
+
+  currentLevel:
+   profile.programme.currentLevel,
+
+  registeredAt:now
+
+ });
+
+ saveLearnerRegistry(registry);
+
+ return profile;
+
+ }
+ /* =========================================================
+   PHASE 1 — LEARNER IDENTITY
+   Step 10A: Administrator enrollment action
+   ========================================================= */
+
+function enrollLearner(profileData={}){
+
+ const profile=
+  createLearnerProfile(profileData);
+
+ saveLearnerProfile(profile);
+
+ return profile;
+
+ }
+ /* =========================================================
+   PHASE 1 — LEARNER IDENTITY
+   Step 10B: Administrator enrollment screen
+   ========================================================= */
+
+function enrollmentPage(){
+
+ return `
+ <div class="card">
+
+  <h2>Enroll New Learner</h2>
+
+  <p>
+   Create a new learner profile and generate a
+   permanent Learner ID.
+  </p>
+
+  <div class="grid">
+
+   <label class="span6">
+    First name
+    <input id="enrollFirstName">
+   </label>
+
+   <label class="span6">
+    Middle name
+    <input id="enrollMiddleName">
+   </label>
+
+   <label class="span6">
+    Last name
+    <input id="enrollLastName">
+   </label>
+
+   <label class="span6">
+    Preferred name
+    <input id="enrollPreferredName">
+   </label>
+
+   <label class="span6">
+    Parent / Guardian name
+    <input id="enrollGuardianName">
+   </label>
+
+   <label class="span6">
+    Relationship
+    <input
+     id="enrollRelationship"
+     value="Parent / Guardian">
+   </label>
+
+   <label class="span6">
+    Parent / Guardian phone
+    <input id="enrollGuardianPhone">
+   </label>
+
+   <label class="span6">
+    Parent / Guardian email
+    <input
+     id="enrollGuardianEmail"
+     type="email">
+   </label>
+
+   <label class="span6">
+    Previous school
+    <input id="enrollSchoolName">
+   </label>
+
+   <label class="span6">
+    Level completed
+    <input id="enrollLevelCompleted">
+   </label>
+
+   <label class="span6">
+    Current level
+    <input id="enrollCurrentLevel">
+   </label>
+
+   <label class="span6">
+    Programme period
+    <input id="enrollProgrammePeriod">
+   </label>
+
+   <label class="span6">
+    Target level
+    <input id="enrollTargetLevel">
+   </label>
+
+   <label class="span6">
+    Target date
+    <input
+     id="enrollTargetDate"
+     type="date">
+   </label>
+
+   <label class="span12">
+    Learning goal
+    <textarea id="enrollGoal"></textarea>
+   </label>
+
+  </div>
+
+  <div class="actions">
+
+   <button
+    class="btn primary"
+    onclick="submitLearnerEnrollment()">
+    Enroll Learner
+   </button>
+
+  </div>
+
+ </div>
+ `;
+
+                       }
+ /* =========================================================
+   PHASE 1 — LEARNER IDENTITY
+   Step 10B: Enrollment submission handler
+   ========================================================= */
+
+function submitLearnerEnrollment(){
+
+ const profile=
+  enrollLearner({
+
+   firstName:
+    document.getElementById(
+     'enrollFirstName'
+    ).value.trim(),
+
+   middleName:
+    document.getElementById(
+     'enrollMiddleName'
+    ).value.trim(),
+
+   lastName:
+    document.getElementById(
+     'enrollLastName'
+    ).value.trim(),
+
+   preferredName:
+    document.getElementById(
+     'enrollPreferredName'
+    ).value.trim(),
+
+   guardianName:
+    document.getElementById(
+     'enrollGuardianName'
+    ).value.trim(),
+
+   relationship:
+    document.getElementById(
+     'enrollRelationship'
+    ).value.trim(),
+
+   guardianPhone:
+    document.getElementById(
+     'enrollGuardianPhone'
+    ).value.trim(),
+
+   guardianEmail:
+    document.getElementById(
+     'enrollGuardianEmail'
+    ).value.trim(),
+
+   schoolName:
+    document.getElementById(
+     'enrollSchoolName'
+    ).value.trim(),
+
+   levelCompleted:
+    document.getElementById(
+     'enrollLevelCompleted'
+    ).value.trim(),
+
+   currentLevel:
+    document.getElementById(
+     'enrollCurrentLevel'
+    ).value.trim(),
+
+   programmePeriod:
+    document.getElementById(
+     'enrollProgrammePeriod'
+    ).value.trim(),
+
+   targetLevel:
+    document.getElementById(
+     'enrollTargetLevel'
+    ).value.trim(),
+
+   targetDate:
+    document.getElementById(
+     'enrollTargetDate'
+    ).value,
+
+   goal:
+    document.getElementById(
+     'enrollGoal'
+    ).value.trim()
+
+  });
+
+ alert(
+  'Learner enrolled successfully. Learner ID: ' +
+  profile.learnerId
+ );
+
+ }
 let recorder=null;
 let recordingChunks=[];
 let audioDB=null;
@@ -830,225 +1441,8 @@ function genericContent(s,w){
  const subj=SUBJECTS[s];
  const title=subj.weeks[w-1];
 
- const detailed={
-  mathematics:{
-   2:{
-    mission:'Number Universe — understand how different types of numbers describe the world.',
-    learn:'Explore natural numbers, whole numbers, integers, rational numbers, irrational numbers and real numbers. Compare their properties and recognise where each type is useful.',
-    try:'Classify 12 numbers as natural, whole, integer, rational, irrational or real. Explain why each classification is appropriate.',
-    practice:[
-     'Explain the difference between a whole number and an integer.',
-     'Give three examples of rational numbers.',
-     'Give one example of an irrational number and explain why it cannot be written as a simple fraction.',
-     'Place selected numbers on a number line.',
-     'Create a real-life situation where negative numbers are useful.'
-    ],
-    voice:'Explain the main number groups to a younger learner using examples.',
-    apply:'Create a Number Universe poster showing the relationships between the major number sets.'
-   },
-
-   3:{
-    mission:'Decimals and Number Lines — represent quantities accurately and reason about their positions.',
-    learn:'Investigate terminating and recurring decimals, decimal place value, comparison of decimals and the representation of decimals on number lines.',
-    try:'Compare 0.7, 0.70, 0.705 and 0.75. Explain what the digits mean and arrange the numbers from smallest to largest.',
-    practice:[
-     'Convert simple fractions into decimals.',
-     'Identify the place value of selected decimal digits.',
-     'Locate decimals on a number line.',
-     'Compare terminating and recurring decimals.',
-     'Use decimals in a Tanzanian money or measurement example.'
-    ],
-    voice:'Explain why 0.5 and 0.50 represent the same quantity.',
-    apply:'Create a decimal number-line investigation using prices, distances or measurements from your environment.'
-   },
-
-   4:{
-    mission:'Inequalities and Absolute Value — compare quantities and understand distance from zero.',
-    learn:'Use inequality symbols to compare values and explore absolute value as distance from zero on a number line.',
-    try:'Compare -8 and -3 using an inequality sign. Then explain the absolute value of each number.',
-    practice:[
-     'Use <, > and = correctly.',
-     'Order positive and negative numbers.',
-     'Find absolute values.',
-     'Represent inequalities on a number line.',
-     'Write three real-life examples involving comparison.'
-    ],
-    voice:'Explain absolute value without using a memorised definition.',
-    apply:'Design a temperature, money or elevation comparison showing positive numbers, negative numbers and absolute values.'
-   },
-
-   5:{
-    mission:'Ratios and Proportions — use relationships between quantities to solve real problems.',
-    learn:'Explore ratios, equivalent ratios, rates and proportions. Connect mathematical ratios to recipes, maps, mixtures, sharing and business.',
-    try:'A drink uses 2 cups of concentrate for every 5 cups of water. Determine the quantities needed for a larger batch while maintaining the same ratio.',
-    practice:[
-     'Simplify ratios.',
-     'Find equivalent ratios.',
-     'Solve simple proportions.',
-     'Interpret a rate in context.',
-     'Create a ratio problem from home or school.'
-    ],
-    voice:'Teach the difference between a ratio and a total quantity.',
-    apply:'Develop a real-life proportion investigation using cooking, transport, construction, shopping or business.'
-   },
-
-   6:{
-    mission:'Approximation, Estimation and Significant Figures — make sensible decisions with numbers.',
-    learn:'Learn why numbers are sometimes rounded or estimated. Apply decimal-place rounding, significant figures and estimation to check whether answers are reasonable.',
-    try:'Estimate the total cost of several household items before calculating the exact total. Compare the estimate with the exact answer.',
-    practice:[
-     'Round numbers to specified decimal places.',
-     'Round numbers to significant figures.',
-     'Estimate sums and products.',
-     'Check whether an answer is reasonable.',
-     'Explain when estimation is more useful than an exact calculation.'
-    ],
-    voice:'Explain why estimation can prevent mathematical mistakes.',
-    apply:'Conduct a shopping-estimation investigation using realistic Tanzanian prices.'
-   },
-
-   7:{
-    mission:'Geometry Around Me — identify, describe and reason about shapes and measurements.',
-    learn:'Investigate angles, lines, polygons, triangles, quadrilaterals, circles, perimeter and area through objects and structures around you.',
-    try:'Choose a room, table, window or playground area. Identify its geometric shapes and estimate or calculate relevant measurements.',
-    practice:[
-     'Classify common polygons.',
-     'Identify different types of angles.',
-     'Calculate perimeter of simple shapes.',
-     'Calculate area of rectangles and related shapes.',
-     'Explain how geometry is used in construction.'
-    ],
-    voice:'Describe how geometry appears in one building or object near you.',
-    apply:'Create a simple geometric plan of a room, classroom or outdoor space with labelled measurements.'
-   },
-
-   8:{
-    mission:'Algebra Translator — turn words and situations into mathematical expressions.',
-    learn:'Understand variables, constants, coefficients and algebraic expressions. Translate everyday statements into mathematical language.',
-    try:'If a notebook costs x shillings, express the cost of 5 notebooks and explain what x represents.',
-    practice:[
-     'Identify variables and constants.',
-     'Translate words into expressions.',
-     'Evaluate simple expressions.',
-     'Combine like terms in simple cases.',
-     'Create an algebraic expression from a real situation.'
-    ],
-    voice:'Explain what a variable represents using an everyday example.',
-    apply:'Build an Algebra Translator table converting five everyday statements into mathematical expressions.'
-   },
-
-   9:{
-    mission:'Build-and-Solve Algebra Lab — use equations to find unknown quantities.',
-    learn:'Explore simple equations and inverse operations. Learn to maintain equality while solving for an unknown.',
-    try:'Solve 3x + 4 = 19. Explain each step and check the answer by substitution.',
-    practice:[
-     'Solve one-step equations.',
-     'Solve simple two-step equations.',
-     'Use inverse operations.',
-     'Check solutions.',
-     'Create a simple equation from a real-life problem.'
-    ],
-    voice:'Teach someone why both sides of an equation must remain balanced.',
-    apply:'Create three real-life equations involving money, age, distance or quantities and solve them.'
-   },
-
-   10:{
-    mission:'Unknown X Investigation — use clues, patterns and equations to determine missing values.',
-    learn:'Use algebraic reasoning, tables, patterns and equations to investigate unknown quantities rather than guessing.',
-    try:'A number is multiplied by 4 and then increased by 6 to give 30. Find the number and explain your reasoning.',
-    practice:[
-     'Work backwards through operations.',
-     'Complete input-output tables.',
-     'Identify number patterns.',
-     'Represent unknowns with variables.',
-     'Check an unknown value using the original condition.'
-    ],
-    voice:'Explain how working backwards can help solve an unknown.',
-    apply:'Create an Unknown X puzzle for another learner and provide a separate solution.'
-   },
-
-   11:{
-    mission:'Mathematics in Real-World Decisions — use evidence and calculation to make informed choices.',
-    learn:'Apply number, ratio, percentage, measurement and comparison skills to everyday decisions involving money, time, transport and resources.',
-    try:'Compare two purchasing options and determine which information is necessary before making a mathematical comparison.',
-    practice:[
-     'Compare prices and quantities.',
-     'Calculate simple percentage changes.',
-     'Use unit rates.',
-     'Interpret information in a table.',
-     'Explain a decision using mathematical evidence.'
-    ],
-    voice:'Explain how mathematics can improve a real-life decision.',
-    apply:'Prepare a short evidence-based comparison between two real-world options.'
-   },
-
-   12:{
-    mission:'Integrated Numerical Reasoning — connect several number skills in one investigation.',
-    learn:'Combine operations, decimals, ratios, percentages, estimation and algebraic reasoning to solve multi-step problems.',
-    try:'Design a multi-step household or school problem requiring at least three mathematical ideas. Solve and explain it.',
-    practice:[
-     'Identify the information needed in a multi-step problem.',
-     'Choose appropriate operations.',
-     'Estimate before calculating.',
-     'Show organised working.',
-     'Check and explain the final answer.'
-    ],
-    voice:'Describe how you decide which mathematical operation to use.',
-    apply:'Complete an Integrated Numerical Reasoning case study using realistic data.'
-   },
-
-   13:{
-    mission:'Geometry + Algebra Design Challenge — combine shape, measurement and unknown quantities.',
-    learn:'Use geometry and algebra together to solve design problems involving dimensions, perimeter, area and unknown measurements.',
-    try:'Create a rectangular garden with an unknown length or width. Use a stated perimeter or area to determine the missing measurement.',
-    practice:[
-     'Write formulas for perimeter and area.',
-     'Substitute known values.',
-     'Use algebra to find an unknown dimension.',
-     'Check whether the result is realistic.',
-     'Explain the design mathematically.'
-    ],
-    voice:'Explain how algebra can help solve a geometry problem.',
-    apply:'Design a small classroom, garden or play area and provide its mathematical plan.'
-   },
-
-   14:{
-    mission:'Mathematics Mastery Mission — demonstrate connected mathematical understanding.',
-    learn:'Review the major ideas studied so far and identify connections between number, algebra, geometry, measurement, ratios and estimation.',
-    try:'Choose three topics from the programme and solve one integrated problem using all three.',
-    practice:[
-     'Review important formulas and concepts.',
-     'Identify personal strengths.',
-     'Identify one concept needing further practice.',
-     'Solve a mixed mathematical problem.',
-     'Explain your reasoning clearly.'
-    ],
-    voice:'Teach one mathematical idea that you understand particularly well.',
-    apply:'Build a personal Mathematics Mastery portfolio containing solved problems and explanations.'
-   },
-
-   15:{
-    mission:'Explain-Your-Thinking Final Challenge — demonstrate readiness through reasoning, not memorisation.',
-    learn:'Use the full range of mathematical reasoning developed during the programme. Focus on accuracy, explanation, checking and independent problem solving.',
-    try:'Complete a mixed challenge containing number, ratio, algebra, geometry and real-life reasoning.',
-    practice:[
-     'Solve unfamiliar problems independently.',
-     'Show complete working.',
-     'Check answers using another method.',
-     'Explain why an answer is reasonable.',
-     'Reflect on mathematical progress.'
-    ],
-    voice:'Teach a complete mathematical idea as if you were preparing a younger learner for Form One.',
-    apply:'Create a final Mathematics Readiness Portfolio demonstrating what you can calculate, explain, investigate and apply.'
-   }
-  }
- };
-
- if(detailed[s] && detailed[s][w]){
-  return detailed[s][w];
- }
-
  const themes={
+  mathematics:'Use mathematical language, relationships, quantities and logical reasoning in a real situation.',
   kiswahili:'Use Kiswahili accurately to listen, speak, read, analyse, write and revise.',
   english:'Use English to understand information and communicate clearly in speech and writing.',
   business:'Think like a young entrepreneur: identify needs, resources, value, costs and responsible decisions.',
@@ -1057,115 +1451,291 @@ function genericContent(s,w){
  };
 
  return {
-  mission:themes[s]||'Explore the topic through evidence, practice and reflection.',
+  mission:themes[s],
+
   learn:`${title} is explored as an active learning investigation. Start with what you already know, connect the idea to everyday life, then explain it in your own words. Your goal is not to memorise a paragraph: it is to demonstrate understanding with evidence.`,
-  try:`Find one real example connected to "${title}". Write the example, identify the important information, and explain what the example teaches you.`,
+
+  try:`Find one real example connected to “${title}”. Write the example, identify the important information, and explain what the example teaches you.`,
+
   practice:[
    'Define the key idea in your own words.',
    'Give two examples from school, home or community.',
    'Create one question someone could ask about this topic.',
    'Solve, explain or demonstrate the question without copying a model answer.'
   ],
-  voice:`In 45–90 seconds, teach one important idea from "${title}" as if you were helping a younger learner. State the idea, give an example, and explain why it matters.`,
+
+  voice:`In 45–90 seconds, teach one important idea from “${title}” as if you were helping a younger learner. State the idea, give an example, and explain why it matters.`,
+
   apply:`Create a small piece of evidence from your environment: a calculation, paragraph, map, business idea, historical explanation, comparison, observation or explanation appropriate to this subject.`
  };
 }
-function tabContent(c){
- const t=state.current.tab||'learn';
 
- return `
-  <div class="card" style="margin-top:16px">
-
-   <div class="row" style="gap:8px;flex-wrap:wrap">
-
-    <button class="btn ${t==='learn'?'active':''}"
-      onclick="state.current.tab='learn';save();render();">
-      Learn
-    </button>
-
-    <button class="btn ${t==='assess'?'active':''}"
-      onclick="state.current.tab='assess';save();render();">
-      Assess
-    </button>
-
-    <button class="btn ${t==='evidence'?'active':''}"
-      onclick="state.current.tab='evidence';save();render();">
-      Evidence
-    </button>
-
-    <button class="btn ${t==='journal'?'active':''}"
-      onclick="state.current.tab='journal';save();render();">
-      Journal
-    </button>
-
-   </div>
-
-   <div style="margin-top:16px">
-
-    ${
-     t==='learn'
-      ? c
-      : t==='assess'
-      ? `
-        <div class="eyebrow">ASSESSMENT</div>
-        <h3>Week ${state.current.week} Assessment</h3>
-        <p class="muted">
-         Complete the learning activities and record your assessment evidence.
-        </p>
-        <button class="btn"
-          onclick="go('assessment')">
-          Open Assessment
-        </button>
-       `
-      : t==='evidence'
-      ? `
-        <div class="eyebrow">LEARNING EVIDENCE</div>
-        <h3>Build Evidence</h3>
-        <p class="muted">
-         Record what the learner knows, explains, produces and demonstrates.
-        </p>
-        <button class="btn"
-          onclick="go('evidence')">
-          Open Evidence Engine
-        </button>
-       `
-      : `
-        <div class="eyebrow">LEARNING JOURNAL</div>
-        <h3>Reflection</h3>
-        <p class="muted">
-         Record the learner's reflection for this learning unit.
-        </p>
-        <button class="btn"
-          onclick="go('journal')">
-          Open Journal
-        </button>
-       `
-    }
-
-   </div>
-
-  </div>
- `;
- }
 function mathWeek1(){
  return {
-  mission:'Mathematics Is Everywhere — become a Mathematics Detective.',
+  mission:
+   'CONCEPT OF MATHEMATICS — Discover what mathematics is, why people use it, and how mathematical thinking helps us make decisions.',
 
-  learn:'Mathematics is a field of reasoning about numbers, quantities, patterns, relationships, shapes, measurement and logical ideas. It helps people describe, measure, compare, calculate, predict and solve problems. It appears in money, shopping, time, distance, cooking, construction, business, transport, technology and everyday decisions.',
+  learn:
+   `Mathematics is more than doing calculations. It is a way of thinking logically about numbers, quantities, patterns, relationships, shapes, measurements and situations.
 
-  try:'Brielle has TZS 10,000. Bread costs TZS 2,000, milk TZS 2,500 and fruit TZS 1,500. How much remains? Explain why subtraction is used and show the working.',
+   In this first unit, you will learn to recognise mathematics in ordinary life and explain why mathematical reasoning is useful.
 
-  practice:[
-   'Find five things at home that involve mathematics.',
-   'A family has TZS 12,000 and shares it equally among 3 people. How much does each receive?',
-   'School starts at 7:30 and a lesson lasts 45 minutes. What time does it finish?',
-   'A shop sells the same item at two different prices. Explain what information you need before choosing.',
-   'Create three mathematical situations from your home or community.'
+   Mathematics helps us:
+   • count and compare quantities;
+   • measure length, time, mass and capacity;
+   • calculate costs and change;
+   • organise information;
+   • recognise patterns and relationships;
+   • estimate and check whether an answer makes sense;
+   • solve problems systematically;
+   • communicate reasoning clearly.
+
+   A mathematical answer should not only tell us WHAT the answer is. Good mathematical thinking also explains HOW we obtained it and WHY the method makes sense.`,
+
+  examples:[
+   {
+    title:'Example 1 — Shopping',
+    problem:'Brielle has TZS 10,000. She buys bread for TZS 2,000 and milk for TZS 2,500. How much money remains?',
+    working:[
+     'Total money = TZS 10,000',
+     'Money spent = TZS 2,000 + TZS 2,500',
+     'Money spent = TZS 4,500',
+     'Money remaining = TZS 10,000 − TZS 4,500',
+     'Money remaining = TZS 5,500'
+    ],
+    reasoning:
+     'Addition finds the total amount spent. Subtraction finds what remains after spending.'
+   },
+
+   {
+    title:'Example 2 — Time',
+    problem:'A lesson begins at 7:30 a.m. and lasts 45 minutes. When does it finish?',
+    working:[
+     'Starting time = 7:30 a.m.',
+     '30 minutes after 7:30 = 8:00 a.m.',
+     '15 more minutes = 8:15 a.m.'
+    ],
+    reasoning:
+     'Time calculations require us to understand the relationship between hours and minutes.'
+   },
+
+   {
+    title:'Example 3 — Sharing',
+    problem:'A family has TZS 12,000 and shares it equally among 3 people. How much does each person receive?',
+    working:[
+     'Total = TZS 12,000',
+     'Number of people = 3',
+     'Each share = 12,000 ÷ 3',
+     'Each person receives = TZS 4,000'
+    ],
+    reasoning:
+     'Division is appropriate because one quantity is being shared equally.'
+   },
+
+   {
+    title:'Example 4 — Checking an Answer',
+    problem:'A learner calculates 398 + 205 and obtains 603. Is the answer reasonable?',
+    working:[
+     '398 is close to 400.',
+     '205 is close to 200.',
+     '400 + 200 = 600.',
+     '603 is close to 600.'
+    ],
+    reasoning:
+     'The answer is reasonable because an estimate gives approximately 600.'
+   }
   ],
 
-  voice:'Explain one thing in your home that would be difficult to use, measure, compare or manage without mathematics. Then explain the mathematics involved.',
+  try:
+   `MATHEMATICS DETECTIVE
 
-  apply:'MY COMMUNITY — MATHEMATICS EVIDENCE: choose shopping, transport, cooking, electricity, water, farming, construction, school or business. Identify the numbers, mathematical idea/operation, answer and reasoning.'
+   Look around your home, school or neighbourhood.
+
+   Find THREE situations where mathematics is being used.
+
+   For each situation record:
+   1. What is happening?
+   2. What quantities or measurements are involved?
+   3. What mathematical operation, relationship or idea is being used?
+   4. Why is mathematics useful in that situation?
+
+   Example areas:
+   shopping, transport, cooking, construction, time, money, water, electricity, sport, farming or business.`,
+
+  parentGuide:
+   `PARENT–LEARNER CONVERSATION
+
+   Do not begin by giving the learner the answer.
+
+   Ask:
+
+   1. Where did you see mathematics being used today?
+   2. What information did you need?
+   3. What were you trying to find out?
+   4. Which mathematical operation or relationship did you choose?
+   5. Why did you choose it?
+   6. How could you check your answer?
+   7. Can you create a similar problem for me?
+
+   Parent role:
+   Ask questions, listen to the learner's reasoning and allow the learner to correct mistakes. The purpose is mathematical thinking, not simply obtaining the correct answer.`,
+
+  guidedPractice:[
+   {
+    q:'A shopkeeper has TZS 20,000. A customer buys goods costing TZS 7,500. How much change should the customer receive?',
+    answer:'TZS 12,500',
+    method:'20,000 − 7,500 = 12,500'
+   },
+   {
+    q:'A water container holds 20 litres. It already contains 7 litres. How many more litres are needed to fill it?',
+    answer:'13 litres',
+    method:'20 − 7 = 13'
+   },
+   {
+    q:'A journey starts at 9:15 a.m. and takes 1 hour 30 minutes. What time does it finish?',
+    answer:'10:45 a.m.',
+    method:'9:15 + 1 hour = 10:15; + 30 minutes = 10:45'
+   }
+  ],
+
+  practice:[
+   'Write five situations in which mathematics is used at home.',
+   'A family spends TZS 8,500 on food and TZS 3,000 on transport. What is the total?',
+   'A 24-metre rope is divided equally into 6 pieces. What is the length of each piece?',
+   'A school has 240 exercise books and distributes them equally among 8 classes. How many books does each class receive?',
+   'Create your own real-life mathematics problem and solve it.'
+  ],
+
+  challenge:
+   `THE MATHEMATICS DETECTIVE CHALLENGE
+
+   A shop has TZS 50,000 available to buy supplies.
+
+   Exercise books cost TZS 2,500 each.
+   Pens cost TZS 500 each.
+
+   The shopkeeper wants to buy 12 exercise books and 20 pens.
+
+   1. Calculate the cost of the exercise books.
+   2. Calculate the cost of the pens.
+   3. Calculate the total cost.
+   4. Calculate the money remaining.
+   5. Explain how you know your answer is reasonable.
+   6. Change one quantity and create a new problem for another learner.`,
+
+  voice:
+   `VOICE STUDIO — TEACH MATHEMATICS
+
+   Imagine that you are teaching a younger learner.
+
+   Explain:
+
+   “What is mathematics, and where do we use it in everyday life?”
+
+   Your explanation must include:
+   1. what mathematics means to you;
+   2. two real-life examples;
+   3. one mathematical calculation;
+   4. an explanation of why the calculation is useful.
+
+   Speak for approximately 60–90 seconds.
+
+   Do not simply read the lesson. Explain it in your own words.`,
+
+  apply:
+   `MY COMMUNITY MATHEMATICS INVESTIGATION
+
+   Choose ONE real situation:
+
+   • shopping
+   • transport
+   • cooking
+   • water
+   • electricity
+   • construction
+   • farming
+   • school
+   • sport
+   • business
+
+   Collect at least three numerical facts.
+
+   Then produce:
+
+   1. Situation
+   2. Information collected
+   3. Mathematical operation or relationship
+   4. Calculation
+   5. Answer
+   6. Explanation of what the answer means
+   7. How you checked the answer
+
+   This becomes your first Mathematics Evidence submission.`,
+
+  knowledgeCheck:[
+   {
+    q:'Which statement best describes mathematics?',
+    options:[
+     'A subject that only involves memorising formulas',
+     'A way of reasoning about quantities, patterns, relationships and problems',
+     'A subject used only at school',
+     'A method used only for money'
+    ],
+    answer:1
+   },
+   {
+    q:'You have TZS 15,000 and spend TZS 6,500. Which operation finds the amount remaining?',
+    options:['Addition','Subtraction','Multiplication','Division'],
+    answer:1
+   },
+   {
+    q:'Why is estimation useful?',
+    options:[
+     'It always gives the exact answer',
+     'It replaces all calculations',
+     'It helps us judge whether an answer is reasonable',
+     'It is only used in examinations'
+    ],
+    answer:2
+   },
+   {
+    q:'If 18 books are shared equally among 3 learners, which operation should be used?',
+    options:['Addition','Subtraction','Multiplication','Division'],
+    answer:3
+   }
+  ],
+
+  reflection:
+   `REFLECTION
+
+   Complete these sentences:
+
+   • Before this lesson, I thought mathematics was...
+   • I now understand that mathematics...
+   • One place where I noticed mathematics today was...
+   • The part I found easiest was...
+   • The part I need to practise is...
+   • One mathematical question I would like to investigate is...`,
+
+  mastery:
+   `MASTERY EVIDENCE
+
+   You are ready to move beyond this unit when you can:
+
+   ✓ explain what mathematics is in your own words;
+   ✓ identify mathematics in everyday situations;
+   ✓ choose an appropriate operation for a simple problem;
+   ✓ show your working;
+   ✓ explain why your method makes sense;
+   ✓ estimate or check whether an answer is reasonable;
+   ✓ create and solve your own real-life mathematical problem;
+   ✓ explain one mathematical idea verbally.
+
+   Mastery levels:
+   EMERGING — needs substantial guidance
+   DEVELOPING — can solve with some support
+   SECURE — works independently and explains reasoning
+   MASTERED — applies the idea confidently to a new situation`
  };
 }
 
@@ -1262,7 +1832,8 @@ case'voice':return voicePage();
   case'journal':return journalPage();
   case'parent':return parentPage();
   case'profile':return profilePage();
-  default:return dashboardPage();
+case'enrollment':return enrollmentPage();
+default:return dashboardPage();
  }
 }
 
@@ -1423,22 +1994,17 @@ function curriculumPage(){
  `;
 }
 function evidencePage(){
-
  const all=state.evidence||[];
 
  const total=all.length;
-
  const voice=all.filter(e=>
    String(e.type||'').toLowerCase().includes('voice')
  ).length;
-
  const reviewed=all.filter(e=>
    e.review &&
    String(e.review).toLowerCase()!=='pending parent review'
  ).length;
-
  const pending=total-reviewed;
-
  const mastered=all.filter(e=>
    String(e.status||'').toLowerCase()==='mastered'
  ).length;
@@ -1446,340 +2012,543 @@ function evidencePage(){
  const subjects=Object.keys(SUBJECTS);
 
  const subjectStats=subjects.map(key=>{
-
    const items=all.filter(e=>e.subject===key);
-
    const secure=items.filter(e=>{
      const s=String(e.status||'').toLowerCase();
      return s==='secure'||s==='mastered';
    }).length;
 
-   const emerging=items.filter(e=>{
-     const s=String(e.status||'').toLowerCase();
-     return s!=='secure'&&s!=='mastered';
-   }).length;
-
-   const subjectName=
-     SUBJECTS[key]?.name||
-     SUBJECTS[key]?.title||
-     key;
-
    return `
-     <div class="card"
-          style="cursor:pointer"
-          onclick="state.page='curriculum';state.current.subject='${key}';save();render()">
-       <div class="eyebrow">
-         SUBJECT
-       </div>
+    <div class="card">
+      <h3>${SUBJECTS[key].name||key}</h3>
+      <div class="small muted">
+        ${items.length} evidence record${items.length===1?'':'s'}
+      </div>
 
-       <h3 style="margin:6px 0">
-         ${subjectName}
-       </h3>
+      <div class="progress" style="margin-top:12px">
+        <span style="width:${items.length?
+          Math.min(100,(secure/items.length)*100):0}%"></span>
+      </div>
 
-       <div class="grid grid-3">
+      <div class="small" style="margin-top:8px">
+        ${secure} Secure+ evidence
+      </div>
 
-         <div>
-           <div class="kpi">${items.length}</div>
-           <div class="small muted">Evidence</div>
-         </div>
-
-         <div>
-           <div class="kpi">${secure}</div>
-           <div class="small muted">Secure</div>
-         </div>
-
-         <div>
-           <div class="kpi">${emerging}</div>
-           <div class="small muted">Developing</div>
-         </div>
-
-       </div>
-
-       <button class="btn"
-               style="margin-top:12px"
-               onclick="event.stopPropagation();go('curriculum');state.current.subject='${key}';render()">
-         Open Subject
-       </button>
-
-     </div>
+      <button class="btn"
+        style="margin-top:12px"
+        onclick="openEvidenceSubject('${key}')">
+        Open Evidence
+      </button>
+    </div>
    `;
  }).join('');
 
+ const rows=all.length
+ ? [...all].reverse().map(e=>`
+    <div class="card" style="margin-top:12px">
 
- const rows=all.slice().reverse().map(e=>`
+      <div style="display:flex;justify-content:space-between;
+                  gap:10px;flex-wrap:wrap">
 
-   <div class="card" style="margin-top:12px">
+        <div>
+          <strong>
+            ${SUBJECTS[e.subject]?.name||e.subject||'Unknown Subject'}
+          </strong>
 
-     <div style="
-       display:flex;
-       justify-content:space-between;
-       align-items:flex-start;
-       gap:10px;
-       flex-wrap:wrap">
+          <div class="small muted">
+            Week ${e.week||'-'} • ${e.topic||'Learning Unit'}
+          </div>
+        </div>
 
-       <div>
+        <div class="badge">
+          ${e.status||'Emerging'}
+        </div>
 
-         <div class="eyebrow">
-           ${e.subject||'Learning Evidence'}
-         </div>
+      </div>
 
-         <h3 style="margin:5px 0">
-           ${e.topic||'Learning Evidence'}
-         </h3>
+      <div class="small" style="margin-top:10px">
+        <strong>Type:</strong> ${e.type||'Learning Evidence'}
+      </div>
 
-         <div class="small muted">
-           Week ${e.week||'—'}
-         </div>
+      ${e.reflection?`
+        <div class="small" style="margin-top:8px">
+          <strong>Reflection:</strong> ${e.reflection}
+        </div>
+      `:''}
 
-       </div>
+      <div class="small muted" style="margin-top:8px">
+        <strong>Review:</strong>
+        ${e.review||'Pending parent review'}
+      </div>
 
-       <div class="badge">
-         ${e.status||'Emerging'}
-       </div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:12px">
 
-     </div>
+        <button class="btn"
+          onclick="openEvidenceUnit('${e.unitKey}')">
+          Open Unit
+        </button>
 
-     <div class="small" style="margin-top:10px">
-       <strong>Type:</strong>
-       ${e.type||'Learning Evidence'}
-     </div>
+        ${e.audioId?`
+          <button class="btn"
+            onclick="playEvidenceAudio('${e.audioId}')">
+            Play Voice
+          </button>
+        `:''}
 
-     ${
-       e.reflection?
-       `
-       <div class="small" style="margin-top:8px">
-         <strong>Reflection:</strong>
-         ${e.reflection}
-       </div>
-       `
-       :''
-     }
+        <button class="btn"
+          onclick="reviewEvidenceFromEngine('${e.id}')">
+          Review
+        </button>
 
-     <div class="small muted" style="margin-top:8px">
+      </div>
+    </div>
+ `).join('')
+ : `
+   <div class="card">
+     <h3>No evidence captured yet</h3>
+     <p class="muted">
+       Complete learning activities, practice, application,
+       reflection or voice tasks to create evidence.
+     </p>
 
-       <strong>Review:</strong>
-
-       ${e.review||'Pending parent review'}
-
-     </div>
-
-     <div style="
-       display:flex;
-       gap:8px;
-       flex-wrap:wrap;
-       margin-top:12px">
-
-       <button class="btn"
-         onclick="openEvidenceUnit('${e.unitKey}')">
-         Open Unit
-       </button>
-
-       ${
-         e.audioId?
-         `
-         <button class="btn"
-           onclick="playEvidenceAudio('${e.audioId}')">
-           Play Voice
-         </button>
-         `
-         :''
-       }
-
-     </div>
-
+     <button class="btn" onclick="go('curriculum')">
+       Open Curriculum Engine
+     </button>
    </div>
-
- `).join('');
-
+ `;
 
  return `
-
- <div class="card">
-
-   <div class="eyebrow">
-     EVIDENCE ENGINE v2.1
-   </div>
-
-   <h1>
-     Learning Evidence Portfolio
-   </h1>
-
-   <p class="small muted">
-     Capture, review and track evidence of learner understanding,
-     reflection, mastery and progression across the curriculum.
-   </p>
-
- </div>
-
-
- <div class="grid grid-3" style="margin-top:16px">
-
-   <div class="card">
-
-     <div class="card" style="cursor:pointer"
-     onclick="go('evidence')">
-
-  <div class="eyebrow">
-    TOTAL EVIDENCE
-  </div>
-
-  <div class="kpi">
-    ${total}
-  </div>
-
-  <div class="small muted">
-    Learning evidence records
-  </div>
-
-</div>
-
-
-<div class="card" style="cursor:pointer"
-     onclick="go('voice')">
-
-  <div class="eyebrow">
-    VOICE EVIDENCE
-  </div>
-
-  <div class="kpi">
-    ${voice}
-  </div>
-
-  <div class="small muted">
-    Recorded learning explanations
-  </div>
-
-</div>
-
-
-<div class="card" style="cursor:pointer"
-     onclick="go('evidence')">
-
-  <div class="eyebrow">
-    PARENT REVIEW
-  </div>
-
-  <div class="kpi">
-    ${pending}
-  </div>
-
-  <div class="small muted">
-    Evidence awaiting review
-  </div>
-
-</div>
-     <div class="kpi">
-       ${voice}
-     </div>
-
-     <div class="small muted">
-       Recorded learning explanations
-     </div>
-
-   </div>
-
-
-   <div class="card">
-
+ <section class="hero">
+   <div>
      <div class="eyebrow">
-       PARENT REVIEW
+       EDUCATION ACCESS • EVIDENCE SYSTEM
      </div>
 
-     <div class="kpi">
-       ${pending}
-     </div>
+     <h1>EVIDENCE ENGINE v2.1</h1>
 
-     <div class="small muted">
-       Evidence awaiting review
-     </div>
+     <p>
+       Central learning evidence portfolio for Brielle.
+       Every evidence record remains connected to the
+       subject, week, learning unit, review and mastery.
+     </p>
+   </div>
+ </section>
 
+ <div class="grid grid-4" style="margin-top:16px">
+
+   <div class="card">
+     <div class="small muted">TOTAL EVIDENCE</div>
+     <div class="kpi">${total}</div>
+     <div class="small">All evidence records</div>
+   </div>
+
+   <div class="card">
+     <div class="small muted">VOICE EVIDENCE</div>
+     <div class="kpi">${voice}</div>
+     <div class="small">Recorded learning evidence</div>
+   </div>
+
+   <div class="card">
+     <div class="small muted">REVIEWED</div>
+     <div class="kpi">${reviewed}</div>
+     <div class="small">Parent/teacher reviewed</div>
+   </div>
+
+   <div class="card">
+     <div class="small muted">PENDING</div>
+     <div class="kpi">${pending}</div>
+     <div class="small">Awaiting review</div>
    </div>
 
  </div>
-
 
  <div class="card" style="margin-top:16px">
 
-   <div style="
-     display:flex;
-     justify-content:space-between;
-     align-items:center;
-     gap:10px;
-     flex-wrap:wrap">
+   <div class="eyebrow">EVIDENCE PIPELINE</div>
 
-     <div>
+   <h2>Learning → Capture → Review → Mastery</h2>
 
-       <div class="eyebrow">
-         SUBJECT EVIDENCE
-       </div>
+   <div class="grid grid-4" style="margin-top:12px">
 
-       <h2>
-         Evidence by Subject
-       </h2>
-
+     <div class="card">
+       <strong>01 • CAPTURE</strong>
+       <p class="small muted">
+         Written, practice, application, assessment and voice evidence.
+       </p>
      </div>
 
+     <div class="card">
+       <strong>02 • ORGANISE</strong>
+       <p class="small muted">
+         Evidence is linked to subject, week and learning unit.
+       </p>
+     </div>
 
-     <button class="btn"
-       onclick="go('curriculum')">
+     <div class="card">
+       <strong>03 • REVIEW</strong>
+       <p class="small muted">
+         Parent and teacher review records learning progress.
+       </p>
+     </div>
 
+     <div class="card">
+       <strong>04 • MASTERY</strong>
+       <p class="small muted">
+         Evidence supports Secure and Mastered learning status.
+       </p>
+     </div>
+
+   </div>
+ </div>
+
+ <div class="card" style="margin-top:16px">
+
+   <div style="display:flex;justify-content:space-between;
+               align-items:center;gap:10px;flex-wrap:wrap">
+
+     <div>
+       <div class="eyebrow">SUBJECT EVIDENCE</div>
+       <h2>Evidence by Subject</h2>
+     </div>
+
+     <button class="btn" onclick="go('curriculum')">
        Curriculum Engine
-
      </button>
 
    </div>
 
-
-   <div class="grid grid-3"
-        style="margin-top:14px">
-
+   <div class="grid grid-3" style="margin-top:14px">
      ${subjectStats}
-
    </div>
 
  </div>
 
-
  <div class="card" style="margin-top:16px">
 
-   <div class="eyebrow">
-     PORTFOLIO
-   </div>
+   <div class="eyebrow">PORTFOLIO</div>
 
-   <h2>
-     Evidence Timeline
-   </h2>
+   <h2>Evidence Timeline</h2>
 
-   ${
-     rows||
-     `
-     <div class="small muted">
-       No learning evidence has been recorded yet.
-     </div>
-     `
-   }
+   ${rows}
 
  </div>
 
-
  <div class="card" style="margin-top:16px">
 
-   <div class="eyebrow">
-     MASTERED EVIDENCE
-   </div>
+   <div class="eyebrow">MASTERED EVIDENCE</div>
 
-   <div class="kpi">
-     ${mastered}
-   </div>
+   <div class="kpi">${mastered}</div>
 
    <div class="small muted">
      Evidence records currently marked Mastered.
    </div>
 
  </div>
-
  `;
 }
+
+function openEvidenceSubject(subject){
+ state.current.subject=subject;
+ save();
+ go('evidence');
+}
+
+function openEvidenceUnit(key){
+ if(!key)return;
+
+ const parts=String(key).split('-');
+ const subject=parts[0];
+ const week=parseInt(parts[1],10);
+
+ if(SUBJECTS[subject]){
+   state.current.subject=subject;
+
+   if(Number.isFinite(week)){
+     state.current.week=week;
+   }
+
+   state.current.tab='mastery';
+
+   save();
+   go('curriculum');
+ }
+}
+
+async function playEvidenceAudio(audioId){
+ if(!audioId)return;
+
+ const blob=await getAudio(audioId);
+
+ if(!blob){
+   alert('Voice evidence audio is not available.');
+   return;
+ }
+
+ const url=URL.createObjectURL(blob);
+ const audio=new Audio(url);
+
+ audio.onended=()=>{
+   URL.revokeObjectURL(url);
+ };
+
+ audio.play();
+}
+
+function reviewEvidenceFromEngine(id){
+ const item=(state.evidence||[])
+   .find(e=>String(e.id)===String(id));
+
+ if(!item){
+   alert('Evidence record not found.');
+   return;
+ }
+
+ const review=prompt(
+   'Enter parent/teacher review:',
+   item.review||''
+ );
+
+ if(review===null)return;
+
+ item.review=review.trim()||'Reviewed';
+ item.reviewedAt=new Date().toISOString();
+
+ save();
+ render();
+ }
+function tabContent(c){
+ const t=state.current.tab;
+
+ if(t==='discover')
+ return `
+  <div class="mission">
+   <b>DISCOVER</b>
+   <p>${esc(c.mission)}</p>
+  </div>
+
+  <div class="card">
+   <h3>Before you learn</h3>
+   <p>
+    Write or say what you already know.
+    Look for one example around you.
+    Ask one question you want this week to answer.
+   </p>
+
+   <textarea id="discoverNote"
+    placeholder="My starting idea..."></textarea>
+
+   <div class="actions">
+    <button class="btn primary" onclick="saveDiscover()">
+     Save Starting Evidence
+    </button>
+   </div>
+  </div>
+ `;
+
+ if(t==='learn')
+ return `
+  <div class="content">
+   <h3>LEARN — Study Notes</h3>
+   <p>${esc(c.learn)}</p>
+
+   <div class="callout">
+    <b>Education Access rule:</b>
+    Explain the idea in your own words before moving to practice.
+   </div>
+  </div>
+ `;
+
+ if(t==='practise')
+ return `
+  <div class="content">
+   <h3>PRACTISE</h3>
+
+   <ol>
+    ${c.practice.map(x=>`<li>${esc(x)}</li>`).join('')}
+   </ol>
+
+   <textarea id="practiceNote"
+    placeholder="Show your work, examples or explanation..."></textarea>
+
+   <div class="actions">
+    <button class="btn primary" onclick="savePractice()">
+     Save Practice Evidence
+    </button>
+   </div>
+  </div>
+ `;
+
+ if(t==='check')
+ return checkTab();
+
+ if(t==='apply')
+ return `
+  <div class="content">
+   <h3>APPLY — Create evidence</h3>
+   <p>${esc(c.apply)}</p>
+
+   <textarea id="applyNote"
+    rows="7"
+    placeholder="Describe or paste your application evidence..."></textarea>
+
+   <div class="actions">
+    <button class="btn primary" onclick="saveApply()">
+     Save Application Evidence
+    </button>
+   </div>
+  </div>
+ `;
+
+ if(t==='voice')
+ return voiceTaskTab(c);
+
+ if(t==='journal')
+ return journalTab();
+
+ if(t==='friday')
+ return fridayMini();
+
+ return masteryTab();
+}
+
+function checkTab(){
+ let q=state.checks[unitKey()]||{};
+
+ let qs=
+ state.current.subject==='mathematics'&&state.current.week===1
+ ?[
+   ['q1','In your own words, what is mathematics?'],
+   ['q2','Give three everyday uses of mathematics.'],
+   ['q3','Why is mathematics useful when managing money?'],
+   ['q4','Calculate TZS 20,000 − 7,500.'],
+   ['q5','Explain the difference between giving an answer and explaining your reasoning.']
+  ]
+ :[
+   ['q1','Define the main idea of this week in your own words.'],
+   ['q2','Give two real-life examples.'],
+   ['q3','What evidence shows that you understand it?']
+  ];
+
+ return `
+ <div class="check">
+  <h3>KNOWLEDGE CHECK</h3>
+
+  ${qs.map(([id,text])=>
+   `<div class="question">
+    <b>${esc(text)}</b>
+    <textarea id="${id}" rows="3">${esc(q[id]||'')}</textarea>
+   </div>`
+  ).join('')}
+ </div>
+
+ <div class="actions">
+  <button class="btn primary" onclick="saveCheck()">
+   Submit Knowledge Check
+  </button>
+ </div>
+ `;
+}
+
+function voiceTaskTab(c){
+ return `
+ <div class="mission">
+  <b>VOICE STUDIO TASK</b>
+  <p>${esc(c.voice)}</p>
+ </div>
+
+ <div class="card">
+
+  <p class="small muted">
+   Auto-tag:
+   <b>
+    ${SUBJECTS[state.current.subject].name}
+    → Week ${state.current.week}
+    → ${esc(SUBJECTS[state.current.subject].weeks[state.current.week-1])}
+   </b>
+  </p>
+
+  <label>
+   Learner reflection before/after recording
+   <textarea
+    id="voiceReflection"
+    rows="3"
+    placeholder="What did I understand? What was difficult?"
+   ></textarea>
+  </label>
+
+  <div class="actions">
+   <button class="btn primary" onclick="startRecording()">
+    🎙️ Start Recording
+   </button>
+
+   <button class="btn danger" onclick="stopRecording()">
+    ⏹ Stop
+   </button>
+  </div>
+
+  <div id="recStatus"
+   class="notice"
+   style="margin-top:10px">
+   Ready. Record a 45–90 second explanation.
+  </div>
+
+ </div>
+
+ <div class="card">
+  <h3>Evidence captured for this unit</h3>
+  ${renderRecordings(unitKey())}
+ </div>
+ `;
+}
+
+function renderRecordings(k){
+ const a=evidenceFor(k);
+
+ if(!a.length)
+  return '<p class="muted">No voice evidence yet.</p>';
+
+ return a.map((x,i)=>
+  `<div class="recording">
+
+   <div class="between">
+    <b>
+     Evidence ${i+1} —
+     ${esc(x.type||'Learning Evidence')}
+    </b>
+
+    <span class="tag">
+     ${esc(x.status||'Emerging')}
+    </span>
+   </div>
+
+   <p class="small muted">
+    ${esc(x.topic)} •
+    ${new Date(x.createdAt).toLocaleString()}
+   </p>
+
+   ${
+    x.audioId
+    ?`<audio controls
+       ${x.audioUrl?`src="${x.audioUrl}"`:''}
+       data-audio-id="${esc(x.audioId)}">
+      </audio>`
+    :''
+   }
+
+   <p>
+    <b>Learner reflection:</b>
+    ${esc(x.reflection||'No reflection added yet.')}
+   </p>
+
+   <p>
+    <b>Parent review:</b>
+    ${esc(x.review||'Pending review')}
+   </p>
+
+  </div>`
+ ).join('');
+}
+
 function journalTab(){
  const k=unitKey();
 
@@ -2297,7 +3066,28 @@ function profilePage(){
  <div class="card">
 
   <h2>Learner & Programme Profile</h2>
+  <div class="actions">
 
+ <button
+  class="btn primary"
+  onclick="go('enrollment')">
+  Enroll New Learner
+ </button>
+
+</div>
+<div class="card" style="margin:12px 0;">
+
+ <strong>Permanent Learner ID</strong>
+
+ <div style="margin-top:6px;font-family:monospace;">
+  ${esc(learnerProfile.learnerId)}
+ </div>
+
+ <small>
+  This identifier remains associated with this learner profile.
+ </small>
+
+</div>
   <div class="grid">
 
    <label class="span6">
@@ -2811,8 +3601,6 @@ render();
 
 hydrateAudioUrls();
 
-</script>
- 
 </script>
 </body>
  </html>
