@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+ <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#08111f">
@@ -13,8 +14,15 @@
 <div id="app" class="app"></div>
 <script>
 'use strict';
+// Supabase connection
+const SUPABASE_URL = 'https://PZDXSLJLPMOMHVBBAEENOD.supabase.co';
+const SUPABASE_PUBLISHABLE_KEY = 'sb_publishable_LSl_bQ2f06jf88nBxPfnJg_5dtHK3vc';
+const supabaseClient = supabase.createClient(
+  SUPABASE_URL,
+  SUPABASE_PUBLISHABLE_KEY
+);
 
-const KEY='EA_Academy_v2_Integrated_V2_1';
+const KEY = 'EA_Academy_v2_Integrated_V2_1';
 
 const SUBJECTS={
  mathematics:{
@@ -160,13 +168,14 @@ const SUBJECTS={
 function defaultState(){
  return {
   profile:{
-   learnerName:'Brielle',
-   school:'Fedha Primary School, Kawe',
-   level:'Grade 7 → Form One',
-   goal:'January 2027 Form One readiness',
-   parentName:'Mr. Patrick',
-   programme:'October–December 2026'
+   learnerName:'',
+   school:'',
+   level:'',
+   goal:'',
+   parentName:'',
+   programme:'Education Access E-Learning Academy'
   },
+  enrollment:null,
   current:{
    subject:'mathematics',
    week:1,
@@ -1845,7 +1854,7 @@ function dashboardPage(){
  return `
  <section class="grid">
  <div class="card full" style="margin-bottom:16px;">
-  <h2>👋 Hello, Brielle!</h2>
+<h2>👋 Hello students, this is Education Access E-Learning Academy.</h2>
   <p class="muted">
     Glad to have you in this session today.
   </p>
