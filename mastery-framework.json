@@ -1,0 +1,188 @@
+{
+"module_id": "EA-F1-MATH-2023",
+"module_name": "Education Access E-Learning Academy — Form One Mathematics",
+"document_type": "mastery_framework",
+"title": "Form One Mathematics Mastery Framework",
+"level": "Form One",
+"purpose": "To establish clear, measurable criteria for evaluating learners' mathematical understanding, procedural fluency, reasoning, application, communication, and independent learning.",
+"mastery_domains": [
+{
+"domain_id": "MF01",
+"name": "Conceptual Understanding",
+"description": "Understanding mathematical concepts, relationships, principles, definitions, and representations.",
+"indicators": [
+"Explains mathematical concepts accurately.",
+"Identifies relationships between mathematical ideas.",
+"Uses mathematical terminology correctly.",
+"Interprets mathematical symbols and representations."
+],
+"evidence": [
+"Knowledge-check responses",
+"Written explanations",
+"Classroom discussions"
+]
+},
+{
+"domain_id": "MF02",
+"name": "Procedural Fluency",
+"description": "Applying mathematical procedures accurately, efficiently, and appropriately.",
+"indicators": [
+"Selects appropriate mathematical operations.",
+"Performs calculations accurately.",
+"Shows logical working steps.",
+"Checks and corrects computational errors."
+],
+"evidence": [
+"Completed exercises",
+"Worked solutions",
+"Topic assessments"
+]
+},
+{
+"domain_id": "MF03",
+"name": "Mathematical Reasoning",
+"description": "Using logical thinking, mathematical arguments, and evidence to justify solutions.",
+"indicators": [
+"Identifies relevant information in a problem.",
+"Explains the choice of a mathematical method.",
+"Justifies conclusions logically.",
+"Recognises and corrects errors in reasoning."
+],
+"evidence": [
+"Problem-solving tasks",
+"Written justifications",
+"Oral explanations"
+]
+},
+{
+"domain_id": "MF04",
+"name": "Mathematical Application",
+"description": "Applying mathematical knowledge to everyday situations and unfamiliar problems.",
+"indicators": [
+"Recognises mathematical ideas in practical situations.",
+"Translates real situations into mathematical expressions.",
+"Selects suitable solution strategies.",
+"Interprets answers in their original context."
+],
+"evidence": [
+"Real-life application activities",
+"Investigations",
+"Practical assignments"
+]
+},
+{
+"domain_id": "MF05",
+"name": "Mathematical Communication",
+"description": "Communicating mathematical thinking clearly using appropriate language, symbols, diagrams, and representations.",
+"indicators": [
+"Presents mathematical work in an organised manner.",
+"Uses correct mathematical notation.",
+"Explains solutions clearly.",
+"Communicates mathematical ideas verbally and in writing."
+],
+"evidence": [
+"Voice activities",
+"Written presentations",
+"Mathematical journal entries"
+]
+},
+{
+"domain_id": "MF06",
+"name": "Independent Learning and Reflection",
+"description": "Demonstrating responsibility, persistence, academic integrity, and reflective learning.",
+"indicators": [
+"Completes assigned activities responsibly.",
+"Identifies personal learning gaps.",
+"Uses feedback to improve performance.",
+"Maintains an organised learning portfolio."
+],
+"evidence": [
+"Learning journal",
+"Activity completion records",
+"Evidence portfolio"
+]
+}
+],
+"mastery_levels": [
+{
+"level": 1,
+"name": "Beginning",
+"description": "The learner demonstrates initial awareness but requires substantial guidance.",
+"progression_requirement": "Recognises basic concepts and attempts introductory activities."
+},
+{
+"level": 2,
+"name": "Developing",
+"description": "The learner demonstrates partial understanding and can complete familiar tasks with some support.",
+"progression_requirement": "Explains basic concepts and completes routine exercises with improving accuracy."
+},
+{
+"level": 3,
+"name": "Proficient",
+"description": "The learner demonstrates secure understanding and independently completes expected Form One tasks.",
+"progression_requirement": "Applies procedures accurately, explains reasoning, and solves familiar practical problems."
+},
+{
+"level": 4,
+"name": "Advanced",
+"description": "The learner demonstrates strong mathematical understanding and applies knowledge flexibly to unfamiliar situations.",
+"progression_requirement": "Solves complex problems, justifies strategies, and communicates mathematical reasoning independently."
+}
+],
+"assessment_evidence": {
+"discover": "Initial responses demonstrating prior knowledge and conceptual awareness.",
+"learn": "Accurate notes, definitions, explanations, and interpretation of examples.",
+"practice": "Completed exercises demonstrating procedural development.",
+"knowledge_check": "Independent responses demonstrating understanding of key concepts.",
+"apply": "Solutions to practical and unfamiliar mathematical problems.",
+"voice": "Verbal explanations and mathematical presentations.",
+"journal": "Reflections identifying achievements, challenges, and improvement strategies.",
+"friday_assessment": "Weekly assessment results and evidence of corrected errors.",
+"evidence_and_mastery": "Organised portfolio demonstrating achievement across mastery domains."
+},
+"progression_rules": {
+"principle": "Progression must be based on demonstrated competence rather than activity completion alone.",
+"requirements": [
+"Review evidence across all relevant mastery domains.",
+"Identify concepts or skills requiring further development.",
+"Provide corrective teaching and additional practice where necessary.",
+"Reassess learners after targeted support.",
+"Record achievement and progression decisions."
+],
+"teacher_authority": "The teacher or authorised learning facilitator validates mastery decisions using assessment evidence and professional judgement."
+},
+"feedback_and_intervention": {
+"feedback_principles": [
+"Provide specific feedback linked to learning objectives.",
+"Identify both strengths and areas requiring improvement.",
+"Explain mathematical errors and misconceptions.",
+"Recommend appropriate corrective activities.",
+"Recognise demonstrated improvement."
+],
+"intervention_steps": [
+"Identify the unmet learning objective.",
+"Determine the underlying misconception or difficulty.",
+"Provide an appropriate explanation or worked example.",
+"Assign targeted practice.",
+"Reassess the learner.",
+"Record the outcome."
+]
+},
+"portfolio_requirements": [
+"Selected completed mathematical exercises",
+"Knowledge-check records",
+"Practical application tasks",
+"Weekly assessment evidence",
+"Corrected mathematical solutions",
+"Learning journal reflections",
+"Teacher feedback and mastery decisions"
+],
+"quality_assurance": {
+"assessment_alignment": "Assessment activities must correspond to the intended learning objectives and mathematical competencies.",
+"fairness": "Assessment criteria must be clear, consistent, and appropriate to the learner's level.",
+"authenticity": "Evidence must represent the learner's own mathematical understanding and performance.",
+"record_integrity": "Mastery decisions must be supported by documented assessment evidence.",
+"curriculum_alignment": "Implementation must remain aligned with the applicable Tanzania Institute of Education Form One Mathematics curriculum."
+},
+"completion_message": "Mathematical mastery is demonstrated through understanding, accuracy, reasoning, application, communication, and the ability to work independently."
+}
