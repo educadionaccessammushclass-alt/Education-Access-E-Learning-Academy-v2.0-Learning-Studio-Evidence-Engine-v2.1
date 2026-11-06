@@ -1,0 +1,245 @@
+{
+  "module_id": "EA-F1-MATH-2023",
+  "file_id": "EA-F1-MATH-TEACHER-GUIDE-01",
+  "title": "Form One Mathematics Teacher's Guide",
+  "version": "1.0.0",
+  "audience": [
+    "Mathematics Teachers",
+    "Academic Coordinators",
+    "Instructional Supervisors",
+    "Education Access Programme Administrators"
+  ],
+  "purpose": "Provide a consistent instructional framework for delivering, assessing and monitoring Form One Mathematics learning.",
+  "teaching_principles": [
+    "Learner-centred instruction",
+    "Competency-based learning",
+    "Conceptual understanding before procedural memorisation",
+    "Practical application of mathematical knowledge",
+    "Inclusive and differentiated instruction",
+    "Continuous assessment and feedback",
+    "Evidence-based mastery progression"
+  ],
+  "lesson_delivery": {
+    "recommended_sequence": [
+      {
+        "stage": "Preparation",
+        "teacher_actions": [
+          "Review the lesson objectives.",
+          "Prepare appropriate teaching and learning materials.",
+          "Identify prerequisite knowledge.",
+          "Prepare examples and assessment questions."
+        ]
+      },
+      {
+        "stage": "Discover",
+        "teacher_actions": [
+          "Introduce a familiar mathematical situation.",
+          "Activate learners' prior knowledge.",
+          "Encourage observation and questioning.",
+          "Connect mathematics to everyday experiences."
+        ]
+      },
+      {
+        "stage": "Learn",
+        "teacher_actions": [
+          "Explain the mathematical concept clearly.",
+          "Demonstrate worked examples.",
+          "Use diagrams and practical illustrations.",
+          "Check understanding throughout instruction."
+        ]
+      },
+      {
+        "stage": "Practice",
+        "teacher_actions": [
+          "Provide guided exercises.",
+          "Allow learners to solve problems independently.",
+          "Identify misconceptions.",
+          "Provide additional examples where necessary."
+        ]
+      },
+      {
+        "stage": "Knowledge Check",
+        "teacher_actions": [
+          "Administer short assessment questions.",
+          "Review learner responses.",
+          "Identify learning gaps.",
+          "Provide corrective explanations."
+        ]
+      },
+      {
+        "stage": "Apply",
+        "teacher_actions": [
+          "Present real-life mathematical problems.",
+          "Encourage learners to select appropriate methods.",
+          "Assess reasoning and accuracy.",
+          "Encourage practical problem-solving."
+        ]
+      },
+      {
+        "stage": "Voice",
+        "teacher_actions": [
+          "Ask learners to explain mathematical concepts.",
+          "Encourage mathematical vocabulary.",
+          "Allow oral, audio or written explanations.",
+          "Assess clarity of mathematical reasoning."
+        ]
+      },
+      {
+        "stage": "Journal",
+        "teacher_actions": [
+          "Ask learners to reflect on their learning.",
+          "Review difficulties and achievements.",
+          "Identify areas requiring further support."
+        ]
+      },
+      {
+        "stage": "Evidence and Mastery",
+        "teacher_actions": [
+          "Review assessment performance.",
+          "Examine completed exercises.",
+          "Verify practical learning evidence.",
+          "Determine readiness for progression."
+        ]
+      }
+    ]
+  },
+  "instructional_methods": [
+    {
+      "method": "Demonstration",
+      "application": "Teacher demonstrates mathematical procedures using worked examples."
+    },
+    {
+      "method": "Guided Discovery",
+      "application": "Learners investigate mathematical relationships through structured questions."
+    },
+    {
+      "method": "Problem-Based Learning",
+      "application": "Learners solve contextual mathematical problems."
+    },
+    {
+      "method": "Collaborative Learning",
+      "application": "Learners work together to investigate and explain mathematical concepts."
+    },
+    {
+      "method": "Independent Practice",
+      "application": "Learners complete exercises individually to demonstrate understanding."
+    },
+    {
+      "method": "Practical Learning",
+      "application": "Learners use measurements, objects, diagrams and real-life examples."
+    }
+  ],
+  "differentiated_instruction": {
+    "support_levels": [
+      {
+        "level": "Additional Support",
+        "learners": "Learners experiencing difficulties with foundational concepts.",
+        "strategies": [
+          "Simplified explanations",
+          "Smaller learning steps",
+          "Additional worked examples",
+          "Teacher-guided practice",
+          "Frequent feedback"
+        ]
+      },
+      {
+        "level": "Expected Progress",
+        "learners": "Learners demonstrating developing or satisfactory understanding.",
+        "strategies": [
+          "Structured exercises",
+          "Independent practice",
+          "Contextual problems",
+          "Regular knowledge checks"
+        ]
+      },
+      {
+        "level": "Enrichment",
+        "learners": "Learners demonstrating strong mathematical understanding.",
+        "strategies": [
+          "Extended problem-solving",
+          "Higher-complexity exercises",
+          "Mathematical investigations",
+          "Independent projects"
+        ]
+      }
+    ]
+  },
+  "assessment_procedures": {
+    "diagnostic_assessment": "Establish learners' prior knowledge before beginning a topic.",
+    "formative_assessment": "Monitor understanding throughout teaching and learning.",
+    "summative_assessment": "Evaluate achievement at the end of a unit or learning period.",
+    "friday_assessment": "Conduct a structured weekly assessment covering taught concepts.",
+    "marking_requirements": [
+      "Use the approved marking scheme.",
+      "Award method marks where appropriate.",
+      "Recognise correct mathematical reasoning.",
+      "Record assessment results accurately.",
+      "Provide constructive feedback."
+    ]
+  },
+  "learner_support_procedures": {
+    "remediation": [
+      "Identify the specific learning difficulty.",
+      "Re-teach the affected concept.",
+      "Provide additional guided exercises.",
+      "Administer a reassessment.",
+      "Record progress."
+    ],
+    "enrichment": [
+      "Provide advanced mathematical challenges.",
+      "Encourage independent investigations.",
+      "Promote mathematical communication.",
+      "Develop deeper problem-solving skills."
+    ]
+  },
+  "teacher_monitoring": {
+    "records_to_maintain": [
+      "Lesson preparation records",
+      "Learner attendance",
+      "Assessment results",
+      "Exercise completion",
+      "Remedial intervention records",
+      "Learner progress reports",
+      "Mastery evidence"
+    ],
+    "monitoring_frequency": "Continuous, with weekly academic review.",
+    "academic_review_questions": [
+      "Were the lesson objectives achieved?",
+      "Which learners require additional support?",
+      "Which concepts require further explanation?",
+      "Are learners demonstrating practical application?",
+      "Is there sufficient evidence of mastery?"
+    ]
+  },
+  "quality_assurance": {
+    "curriculum_consistency": true,
+    "assessment_alignment": true,
+    "learner_progress_tracking": true,
+    "teacher_feedback": true,
+    "evidence_verification": true,
+    "periodic_content_review": true
+  },
+  "professional_standards": {
+    "accuracy_of_mathematical_content": "Mandatory",
+    "inclusive_learning_environment": "Mandatory",
+    "learner_data_confidentiality": "Mandatory",
+    "fair_assessment_practices": "Mandatory",
+    "continuous_professional_development": "Expected"
+  },
+  "reporting": {
+    "weekly_report": [
+      "Topics covered",
+      "Learning objectives achieved",
+      "Assessment performance",
+      "Learners requiring intervention",
+      "Recommended next steps"
+    ],
+    "termly_report": [
+      "Curriculum coverage",
+      "Learner achievement",
+      "Competency development",
+      "Intervention effectiveness",
+      "Recommendations"
+    ]
+  }
+}
