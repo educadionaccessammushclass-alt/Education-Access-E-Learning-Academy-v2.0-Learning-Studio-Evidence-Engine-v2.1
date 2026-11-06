@@ -1,0 +1,454 @@
+{
+  "module_id": "EA-F1-MATH-2023",
+  "module_name": "Education Access E-Learning Academy — Form One Mathematics",
+  "document_type": "topic_map",
+  "title": "Form One Mathematics Curriculum Topic Map",
+  "level": "Form One",
+  "curriculum_reference": {
+    "authority": "Tanzania Institute of Education",
+    "document": "Mathematics Syllabus for Ordinary Secondary Education Form I-IV",
+    "year": 2023,
+    "isbn": "978-9987-09-828-6",
+    "status": "Approved syllabus",
+    "source_url": "https://tie.go.tz/uploads/documents/sw-1727256902-MATHEMATICS%20SYLLABUS%20-%20O%20level%20final.pdf"
+  },
+  "purpose": "To organise the Form One Mathematics curriculum into identifiable topics, learning units, competencies, instructional activities, assessment requirements and mastery evidence.",
+  "curriculum_structure": {
+    "main_competencies": [
+      {
+        "competency_id": "MC01",
+        "name": "Demonstrate mastery of mathematical language",
+        "specific_competencies": [
+          "SC1.1 Use numerical skills in different contexts",
+          "SC1.2 Use ratios and proportions in daily life"
+        ]
+      },
+      {
+        "competency_id": "MC02",
+        "name": "Demonstrate mastery of basic concepts in geometry and algebra",
+        "specific_competencies": [
+          "SC2.1 Use geometry, approximations, relations and functions in various contexts",
+          "SC2.2 Use algebra and matrices in problem solving"
+        ]
+      },
+      {
+        "competency_id": "MC03",
+        "name": "Demonstrate mastery of basic concepts in coordinate geometry, trigonometry, circles, vectors, probability and statistics",
+        "specific_competencies": [
+          "SC3.1 Use basic coordinate geometry, trigonometry and vectors skills in daily life"
+        ]
+      }
+    ]
+  },
+  "topics": [
+    {
+      "topic_id": "F1-MATH-01",
+      "topic_name": "Basic Concepts of Mathematics and Numbers",
+      "competency": "MC01",
+      "specific_competency": "SC1.1",
+      "recommended_periods": 30,
+      "learning_units": [
+        {
+          "unit_id": "F1-MATH-01-U01",
+          "title": "Meaning and Importance of Mathematics",
+          "content": [
+            "Meaning of Mathematics",
+            "Branches of Mathematics",
+            "Relationship between Mathematics and other subjects",
+            "Importance of Mathematics in everyday life"
+          ],
+          "learning_outcomes": [
+            "Explain the meaning of Mathematics.",
+            "Identify branches of Mathematics.",
+            "Describe relationships between Mathematics and other disciplines.",
+            "Explain the importance of Mathematics in daily life."
+          ]
+        },
+        {
+          "unit_id": "F1-MATH-01-U02",
+          "title": "Rational, Irrational and Real Numbers",
+          "content": [
+            "Concept of rational numbers",
+            "Concept of irrational numbers",
+            "Real number classification",
+            "Recurring decimals and fractions",
+            "Representation of rational numbers on a number line",
+            "Inequalities and absolute values"
+          ],
+          "learning_outcomes": [
+            "Distinguish rational and irrational numbers.",
+            "Classify real numbers.",
+            "Convert recurring decimals into fractions and fractions into decimals.",
+            "Represent rational numbers on a number line.",
+            "Explain inequalities and absolute values.",
+            "Apply numbers in real-life situations."
+          ]
+        }
+      ],
+      "assessment": [
+        "Concept identification exercises",
+        "Number classification activities",
+        "Decimal and fraction conversion",
+        "Number line exercises",
+        "Real-life numerical problems"
+      ],
+      "mastery_evidence": [
+        "Accurate number classification",
+        "Correct conversions",
+        "Correct number line representations",
+        "Clear mathematical explanations"
+      ]
+    },
+    {
+      "topic_id": "F1-MATH-02",
+      "topic_name": "Ratios and Proportions",
+      "competency": "MC01",
+      "specific_competency": "SC1.2",
+      "recommended_periods": 36,
+      "learning_units": [
+        {
+          "unit_id": "F1-MATH-02-U01",
+          "title": "Understanding Ratios",
+          "content": [
+            "Meaning of ratios",
+            "Writing ratios",
+            "Comparing quantities",
+            "Simplifying ratios"
+          ],
+          "learning_outcomes": [
+            "Explain the concept of ratios.",
+            "Express quantities as ratios.",
+            "Compare quantities using ratios.",
+            "Simplify ratios correctly."
+          ]
+        },
+        {
+          "unit_id": "F1-MATH-02-U02",
+          "title": "Understanding Proportions",
+          "content": [
+            "Meaning of proportions",
+            "Relationship between ratios and proportions",
+            "Equivalent ratios",
+            "Solving proportion problems"
+          ],
+          "learning_outcomes": [
+            "Explain proportions.",
+            "Identify equivalent ratios.",
+            "Establish proportional relationships.",
+            "Solve proportion problems accurately."
+          ]
+        },
+        {
+          "unit_id": "F1-MATH-02-U03",
+          "title": "Practical Applications of Ratios and Proportions",
+          "content": [
+            "Sharing quantities",
+            "Comparing prices and quantities",
+            "Scale and measurement applications",
+            "Everyday proportional reasoning"
+          ],
+          "learning_outcomes": [
+            "Apply ratios to everyday situations.",
+            "Solve practical proportion problems.",
+            "Explain mathematical reasoning behind solutions."
+          ]
+        }
+      ],
+      "assessment": [
+        "Ratio simplification exercises",
+        "Equivalent ratio questions",
+        "Proportion calculations",
+        "Practical sharing problems",
+        "Real-life application tasks"
+      ],
+      "mastery_evidence": [
+        "Correct ratio expressions",
+        "Accurate proportion calculations",
+        "Logical working steps",
+        "Successful practical applications"
+      ]
+    },
+    {
+      "topic_id": "F1-MATH-03",
+      "topic_name": "Approximations",
+      "competency": "MC02",
+      "specific_competency": "SC2.1",
+      "recommended_periods": 34,
+      "learning_units": [
+        {
+          "unit_id": "F1-MATH-03-U01",
+          "title": "Introduction to Approximations",
+          "content": [
+            "Meaning of approximation",
+            "Rounding off numbers",
+            "Estimation of numerical expressions"
+          ],
+          "learning_outcomes": [
+            "Explain approximation.",
+            "Round off numbers correctly.",
+            "Estimate values of mathematical expressions."
+          ]
+        },
+        {
+          "unit_id": "F1-MATH-03-U02",
+          "title": "Significant Figures and Decimal Places",
+          "content": [
+            "Meaning of significant figures",
+            "Identifying significant figures",
+            "Decimal places",
+            "Approximating to required accuracy"
+          ],
+          "learning_outcomes": [
+            "Identify significant figures.",
+            "Approximate numbers to specified significant figures.",
+            "Approximate numbers to specified decimal places."
+          ]
+        },
+        {
+          "unit_id": "F1-MATH-03-U03",
+          "title": "Applications of Approximation",
+          "content": [
+            "Approximation in calculations",
+            "Estimation in measurements",
+            "Practical numerical accuracy"
+          ],
+          "learning_outcomes": [
+            "Use approximations in calculations.",
+            "Estimate measurements in practical situations.",
+            "Evaluate the reasonableness of numerical answers."
+          ]
+        }
+      ],
+      "assessment": [
+        "Rounding exercises",
+        "Significant figure questions",
+        "Decimal place exercises",
+        "Estimation activities",
+        "Measurement applications"
+      ],
+      "mastery_evidence": [
+        "Correct rounding",
+        "Accurate significant figures",
+        "Correct decimal place approximations",
+        "Appropriate estimation strategies"
+      ]
+    },
+    {
+      "topic_id": "F1-MATH-04",
+      "topic_name": "Algebra",
+      "competency": "MC02",
+      "specific_competency": "SC2.2",
+      "recommended_periods": 45,
+      "learning_units": [
+        {
+          "unit_id": "F1-MATH-04-U01",
+          "title": "Introduction to Algebra",
+          "content": [
+            "Meaning of algebra",
+            "Variables and constants",
+            "Algebraic expressions",
+            "Algebraic equations"
+          ],
+          "learning_outcomes": [
+            "Explain basic algebraic concepts.",
+            "Identify variables and constants.",
+            "Form algebraic expressions.",
+            "Recognise algebraic equations."
+          ]
+        },
+        {
+          "unit_id": "F1-MATH-04-U02",
+          "title": "Algebraic Modelling",
+          "content": [
+            "Translating words into algebraic expressions",
+            "Forming equations from word problems",
+            "Representing practical situations algebraically"
+          ],
+          "learning_outcomes": [
+            "Translate verbal statements into algebraic expressions.",
+            "Construct equations from practical situations.",
+            "Use algebra to model mathematical problems."
+          ]
+        },
+        {
+          "unit_id": "F1-MATH-04-U03",
+          "title": "Simultaneous Linear Equations",
+          "content": [
+            "Linear equations in two unknowns",
+            "Substitution method",
+            "Elimination method",
+            "Verification of solutions"
+          ],
+          "learning_outcomes": [
+            "Explain simultaneous linear equations.",
+            "Solve simultaneous equations using substitution.",
+            "Solve simultaneous equations using elimination.",
+            "Verify mathematical solutions."
+          ]
+        },
+        {
+          "unit_id": "F1-MATH-04-U04",
+          "title": "Inequalities in One Unknown",
+          "content": [
+            "Meaning of inequalities",
+            "Inequality symbols",
+            "Solving inequalities in one unknown",
+            "Representing solutions on a number line"
+          ],
+          "learning_outcomes": [
+            "Recognise inequality symbols.",
+            "Solve inequalities in one unknown.",
+            "Represent inequality solutions appropriately."
+          ]
+        }
+      ],
+      "assessment": [
+        "Expression formation exercises",
+        "Algebraic modelling problems",
+        "Substitution exercises",
+        "Elimination exercises",
+        "Inequality problems"
+      ],
+      "mastery_evidence": [
+        "Correct algebraic expressions",
+        "Accurate simultaneous equation solutions",
+        "Correct inequality solutions",
+        "Clear mathematical reasoning"
+      ]
+    },
+    {
+      "topic_id": "F1-MATH-05",
+      "topic_name": "Coordinate Geometry",
+      "competency": "MC03",
+      "specific_competency": "SC3.1",
+      "recommended_periods": 30,
+      "learning_units": [
+        {
+          "unit_id": "F1-MATH-05-U01",
+          "title": "Introduction to Coordinate Geometry",
+          "content": [
+            "Coordinate plane",
+            "Cartesian coordinates",
+            "Gradient of a straight line",
+            "Equations of straight lines"
+          ],
+          "learning_outcomes": [
+            "Explain basic coordinate geometry.",
+            "Identify coordinates on a Cartesian plane.",
+            "Determine the gradient of a straight line.",
+            "Determine equations of straight lines."
+          ]
+        },
+        {
+          "unit_id": "F1-MATH-05-U02",
+          "title": "Graphs of Linear Equations",
+          "content": [
+            "Plotting coordinate points",
+            "Drawing straight-line graphs",
+            "Interpreting linear graphs",
+            "Relationship between equations and graphs"
+          ],
+          "learning_outcomes": [
+            "Plot points accurately.",
+            "Draw graphs of linear equations.",
+            "Interpret straight-line graphs.",
+            "Relate equations to graphical representations."
+          ]
+        },
+        {
+          "unit_id": "F1-MATH-05-U03",
+          "title": "Graphical Solutions of Simultaneous Equations",
+          "content": [
+            "Graphical representation of simultaneous equations",
+            "Intersection of straight lines",
+            "Determining solutions graphically",
+            "Use of mathematical software"
+          ],
+          "learning_outcomes": [
+            "Represent simultaneous equations graphically.",
+            "Determine solutions using intersection points.",
+            "Use suitable mathematical software to solve and draw graphs."
+          ]
+        }
+      ],
+      "assessment": [
+        "Coordinate identification",
+        "Gradient calculations",
+        "Straight-line graph construction",
+        "Graph interpretation",
+        "Graphical solutions of simultaneous equations"
+      ],
+      "mastery_evidence": [
+        "Accurate coordinate plotting",
+        "Correct gradient calculations",
+        "Accurate graphical representations",
+        "Correct graphical solutions",
+        "Interpretation of mathematical graphs"
+      ]
+    }
+  ],
+  "platform_learning_sequence": [
+    {
+      "stage": 1,
+      "name": "Discover",
+      "function": "Introduce each topic through prior knowledge and contextual questions."
+    },
+    {
+      "stage": 2,
+      "name": "Learn",
+      "function": "Deliver explanations, definitions, concepts and worked examples."
+    },
+    {
+      "stage": 3,
+      "name": "Practice",
+      "function": "Provide guided and independent mathematical exercises."
+    },
+    {
+      "stage": 4,
+      "name": "Knowledge Check",
+      "function": "Evaluate understanding of the current learning unit."
+    },
+    {
+      "stage": 5,
+      "name": "Apply",
+      "function": "Connect mathematical concepts to practical situations and problem solving."
+    },
+    {
+      "stage": 6,
+      "name": "Voice",
+      "function": "Allow learners to explain mathematical reasoning verbally."
+    },
+    {
+      "stage": 7,
+      "name": "Journal",
+      "function": "Record learning reflections, difficulties and progress."
+    },
+    {
+      "stage": 8,
+      "name": "Friday Assessment",
+      "function": "Evaluate weekly learning outcomes."
+    },
+    {
+      "stage": 9,
+      "name": "Evidence and Mastery",
+      "function": "Collect and review evidence of demonstrated competence."
+    }
+  ],
+  "curriculum_delivery_rules": {
+    "topic_sequence": "Follow the approved Form One syllabus sequence.",
+    "unit_sequence": "Teach learning units in their defined instructional order.",
+    "assessment_alignment": "Every assessment must correspond to the relevant learning outcomes.",
+    "mastery_validation": "Completion of activities alone does not establish mastery.",
+    "teacher_authority": "Teachers validate achievement and determine appropriate intervention.",
+    "period_allocation": "Use the syllabus period allocations as planning references, subject to approved institutional timetabling."
+  },
+  "quality_assurance": {
+    "curriculum_alignment": "Verify topic coverage against the official TIE 2023 Mathematics syllabus.",
+    "content_accuracy": "Mathematical explanations, examples and exercises must be checked for accuracy.",
+    "assessment_validity": "Assessment tasks must measure the intended competencies.",
+    "progression": "Learners receive additional support before progression where mastery evidence is insufficient.",
+    "platform_integrity": "Topic identifiers and learning unit identifiers must remain unique and consistent across platform files."
+  },
+  "implementation_note": "The topic map organises the official Form One syllabus content into digital learning units. Detailed lesson content, exercises, examples and assessment instruments will be developed in separate curriculum files. The official syllabus remains the controlling reference for content and sequencing.",
+  "completion_message": "Every mathematical topic is a progression from understanding to practice, reasoning, application and demonstrated mastery."
+}
