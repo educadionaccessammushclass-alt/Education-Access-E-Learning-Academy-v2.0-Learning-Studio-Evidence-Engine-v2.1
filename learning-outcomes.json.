@@ -1,0 +1,199 @@
+{
+  "module_id": "EA-F1-MATH-2023",
+  "file_id": "EA-F1-MATH-OUTCOMES-01",
+  "title": "Form One Mathematics — Learning Outcomes",
+  "version": "1.0.0",
+  "purpose": "Define measurable learning outcomes for knowledge, understanding, mathematical skills, reasoning and practical application.",
+  "learning_outcomes": [
+    {
+      "unit_id": "F1-MATH-01",
+      "unit": "Numbers",
+      "outcomes": [
+        "Identify and classify natural numbers, whole numbers and integers.",
+        "Compare and arrange numbers in ascending and descending order.",
+        "Identify factors, multiples and prime numbers.",
+        "Determine the highest common factor and lowest common multiple.",
+        "Perform operations involving fractions and decimals.",
+        "Convert fractions into decimals and percentages.",
+        "Apply number concepts to everyday situations."
+      ],
+      "mastery_evidence": [
+        "Correct classification of numbers.",
+        "Accurate calculations.",
+        "Successful completion of practical number problems."
+      ]
+    },
+    {
+      "unit_id": "F1-MATH-02",
+      "unit": "Basic Operations",
+      "outcomes": [
+        "Perform addition, subtraction, multiplication and division.",
+        "Apply the correct order of operations.",
+        "Estimate answers before calculating.",
+        "Check mathematical answers using inverse operations.",
+        "Solve practical problems involving basic operations."
+      ],
+      "mastery_evidence": [
+        "Accurate written calculations.",
+        "Correct use of mathematical operations.",
+        "Reasonable estimation and verification."
+      ]
+    },
+    {
+      "unit_id": "F1-MATH-03",
+      "unit": "Fractions, Decimals and Percentages",
+      "outcomes": [
+        "Identify proper, improper and mixed fractions.",
+        "Find equivalent fractions.",
+        "Compare and order fractions.",
+        "Perform arithmetic operations involving fractions.",
+        "Perform operations involving decimal numbers.",
+        "Calculate percentages of given quantities.",
+        "Convert between fractions, decimals and percentages.",
+        "Solve everyday problems involving percentages."
+      ],
+      "mastery_evidence": [
+        "Correct fraction simplification.",
+        "Accurate conversions.",
+        "Successful percentage calculations."
+      ]
+    },
+    {
+      "unit_id": "F1-MATH-04",
+      "unit": "Introduction to Algebra",
+      "outcomes": [
+        "Explain the meaning of variables and constants.",
+        "Translate simple verbal statements into algebraic expressions.",
+        "Identify terms and coefficients.",
+        "Simplify algebraic expressions.",
+        "Evaluate expressions through substitution.",
+        "Form and solve simple equations.",
+        "Apply algebra to practical situations."
+      ],
+      "mastery_evidence": [
+        "Correct expression formation.",
+        "Accurate simplification.",
+        "Correct solutions to simple equations."
+      ]
+    },
+    {
+      "unit_id": "F1-MATH-05",
+      "unit": "Sets",
+      "outcomes": [
+        "Explain the meaning of a set.",
+        "Identify elements and subsets.",
+        "Represent sets using appropriate notation.",
+        "Distinguish between finite and infinite sets.",
+        "Determine the union and intersection of sets.",
+        "Represent set relationships using diagrams.",
+        "Solve simple problems involving sets."
+      ],
+      "mastery_evidence": [
+        "Correct set notation.",
+        "Accurate identification of elements.",
+        "Correct interpretation of set diagrams."
+      ]
+    },
+    {
+      "unit_id": "F1-MATH-06",
+      "unit": "Geometry",
+      "outcomes": [
+        "Identify points, lines and planes.",
+        "Recognise and classify different types of angles.",
+        "Measure and draw angles accurately.",
+        "Identify parallel and perpendicular lines.",
+        "Classify triangles and quadrilaterals.",
+        "Describe basic properties of geometric shapes.",
+        "Apply geometric knowledge to practical problems."
+      ],
+      "mastery_evidence": [
+        "Accurate geometric constructions.",
+        "Correct classification of shapes.",
+        "Appropriate use of geometric terminology."
+      ]
+    },
+    {
+      "unit_id": "F1-MATH-07",
+      "unit": "Measurement",
+      "outcomes": [
+        "Identify standard units of length, mass and capacity.",
+        "Convert between commonly used measurement units.",
+        "Read and interpret measurements.",
+        "Calculate the perimeter of simple shapes.",
+        "Determine the area of appropriate plane figures.",
+        "Solve practical problems involving measurement."
+      ],
+      "mastery_evidence": [
+        "Correct unit selection.",
+        "Accurate measurement conversions.",
+        "Correct perimeter and area calculations."
+      ]
+    },
+    {
+      "unit_id": "F1-MATH-08",
+      "unit": "Ratio and Proportion",
+      "outcomes": [
+        "Explain ratio and proportion.",
+        "Express quantities as ratios.",
+        "Simplify ratios to their lowest terms.",
+        "Identify equivalent ratios.",
+        "Solve simple direct proportion problems.",
+        "Apply ratios to everyday situations."
+      ],
+      "mastery_evidence": [
+        "Correct ratio representation.",
+        "Accurate simplification.",
+        "Successful practical applications."
+      ]
+    },
+    {
+      "unit_id": "F1-MATH-09",
+      "unit": "Introduction to Statistics",
+      "outcomes": [
+        "Explain the meaning of data and statistics.",
+        "Collect and organise simple data.",
+        "Construct frequency tables.",
+        "Represent data using pictograms and bar charts.",
+        "Interpret information presented in tables and charts.",
+        "Communicate simple conclusions based on data."
+      ],
+      "mastery_evidence": [
+        "Accurate frequency tables.",
+        "Correctly constructed charts.",
+        "Reasonable interpretation of data."
+      ]
+    },
+    {
+      "unit_id": "F1-MATH-10",
+      "unit": "Introduction to Coordinate Geometry",
+      "outcomes": [
+        "Identify the Cartesian coordinate plane.",
+        "Identify the horizontal and vertical axes.",
+        "Explain the meaning of ordered pairs.",
+        "Plot points on a coordinate plane.",
+        "Read and interpret coordinates.",
+        "Use coordinates to describe positions."
+      ],
+      "mastery_evidence": [
+        "Correct identification of axes.",
+        "Accurate plotting of points.",
+        "Correct reading of ordered pairs."
+      ]
+    }
+  ],
+  "cross_cutting_outcomes": [
+    "Demonstrate logical and mathematical reasoning.",
+    "Communicate mathematical ideas clearly.",
+    "Use mathematical knowledge to solve real-life problems.",
+    "Demonstrate accuracy and responsibility in calculations.",
+    "Develop independent learning habits.",
+    "Reflect on mathematical progress and areas requiring improvement."
+  ],
+  "assessment_principles": {
+    "measurability": true,
+    "competency_based": true,
+    "practical_application": true,
+    "continuous_feedback": true,
+    "evidence_based_mastery": true
+  }
+}
