@@ -1,0 +1,189 @@
+{
+  "module_id": "EA-F1-MATH-2023",
+  "module_name": "Education Access E-Learning Academy — Form One Mathematics",
+  "document_type": "learning_outcomes",
+  "title": "Form One Mathematics Learning Outcomes Framework",
+  "level": "Form One",
+  "curriculum_reference": "Tanzania Institute of Education — Mathematics Curriculum, 2023",
+  "purpose": "To define the knowledge, understanding, mathematical skills, reasoning abilities and practical competencies learners are expected to demonstrate through the Form One Mathematics programme.",
+  "programme_outcomes": [
+    {
+      "outcome_id": "LO01",
+      "domain": "Mathematical Knowledge",
+      "expected_outcomes": [
+        "Recall relevant mathematical facts, definitions and terminology.",
+        "Recognise mathematical symbols and conventions.",
+        "Identify relationships between mathematical concepts.",
+        "Describe mathematical principles using appropriate language."
+      ],
+      "assessment_evidence": [
+        "Knowledge checks",
+        "Written exercises",
+        "Oral explanations"
+      ]
+    },
+    {
+      "outcome_id": "LO02",
+      "domain": "Numerical Competence",
+      "expected_outcomes": [
+        "Perform appropriate numerical calculations.",
+        "Apply mathematical operations correctly.",
+        "Use estimation to evaluate the reasonableness of answers.",
+        "Demonstrate accuracy when solving numerical problems."
+      ],
+      "assessment_evidence": [
+        "Calculation exercises",
+        "Problem-solving activities",
+        "Topic assessments"
+      ]
+    },
+    {
+      "outcome_id": "LO03",
+      "domain": "Mathematical Procedures",
+      "expected_outcomes": [
+        "Select appropriate procedures for mathematical tasks.",
+        "Apply mathematical rules systematically.",
+        "Present calculations in logical sequences.",
+        "Verify solutions using appropriate methods."
+      ],
+      "assessment_evidence": [
+        "Worked examples",
+        "Independent exercises",
+        "Practical demonstrations"
+      ]
+    },
+    {
+      "outcome_id": "LO04",
+      "domain": "Mathematical Reasoning",
+      "expected_outcomes": [
+        "Analyse mathematical information.",
+        "Identify relevant information in problems.",
+        "Explain the reasoning behind mathematical procedures.",
+        "Justify answers using mathematical evidence.",
+        "Identify and correct errors in solutions."
+      ],
+      "assessment_evidence": [
+        "Reasoning questions",
+        "Written explanations",
+        "Mathematical discussions"
+      ]
+    },
+    {
+      "outcome_id": "LO05",
+      "domain": "Problem Solving",
+      "expected_outcomes": [
+        "Interpret mathematical problems correctly.",
+        "Identify appropriate solution strategies.",
+        "Solve routine mathematical problems independently.",
+        "Attempt unfamiliar problems using logical methods.",
+        "Interpret solutions in relation to the original problem."
+      ],
+      "assessment_evidence": [
+        "Application activities",
+        "Investigative tasks",
+        "Problem-solving assessments"
+      ]
+    },
+    {
+      "outcome_id": "LO06",
+      "domain": "Mathematical Communication",
+      "expected_outcomes": [
+        "Use mathematical terminology correctly.",
+        "Present mathematical solutions clearly.",
+        "Interpret mathematical diagrams and representations.",
+        "Explain mathematical ideas verbally and in writing.",
+        "Communicate reasoning using appropriate mathematical notation."
+      ],
+      "assessment_evidence": [
+        "Voice activities",
+        "Written presentations",
+        "Learning journal"
+      ]
+    },
+    {
+      "outcome_id": "LO07",
+      "domain": "Practical Application",
+      "expected_outcomes": [
+        "Recognise mathematics in everyday situations.",
+        "Apply mathematical knowledge to practical tasks.",
+        "Interpret numerical information in real-life contexts.",
+        "Use appropriate mathematical tools and instruments.",
+        "Demonstrate the relevance of mathematics to everyday decision-making."
+      ],
+      "assessment_evidence": [
+        "Practical assignments",
+        "Real-life investigations",
+        "Application projects"
+      ]
+    },
+    {
+      "outcome_id": "LO08",
+      "domain": "Independent Learning",
+      "expected_outcomes": [
+        "Study mathematical concepts independently.",
+        "Complete assigned learning activities responsibly.",
+        "Identify personal learning difficulties.",
+        "Use feedback to improve mathematical performance.",
+        "Maintain an organised record of mathematical learning."
+      ],
+      "assessment_evidence": [
+        "Learning journal",
+        "Activity records",
+        "Evidence portfolio"
+      ]
+    }
+  ],
+  "learning_stage_alignment": {
+    "discover": "Identify prior knowledge and recognise the mathematical concepts introduced.",
+    "learn": "Understand and explain new mathematical concepts, definitions and procedures.",
+    "practice": "Apply mathematical procedures accurately through guided and independent exercises.",
+    "knowledge_check": "Demonstrate understanding through independent responses.",
+    "apply": "Transfer mathematical knowledge to practical and unfamiliar situations.",
+    "voice": "Communicate mathematical ideas and explain solution methods.",
+    "journal": "Reflect on learning progress, challenges and improvement strategies.",
+    "friday_assessment": "Demonstrate achievement of the week's intended learning outcomes.",
+    "evidence_and_mastery": "Present documented evidence of achievement across relevant learning outcomes."
+  },
+  "outcome_assessment_levels": [
+    {
+      "level": 1,
+      "name": "Not Yet Demonstrated",
+      "description": "The learner has not yet provided sufficient evidence of the expected outcome.",
+      "required_action": "Provide additional explanation, guided learning and targeted practice."
+    },
+    {
+      "level": 2,
+      "name": "Emerging",
+      "description": "The learner demonstrates partial understanding but requires further support.",
+      "required_action": "Provide structured exercises and opportunities for improvement."
+    },
+    {
+      "level": 3,
+      "name": "Achieved",
+      "description": "The learner independently demonstrates the expected outcome.",
+      "required_action": "Record achievement and provide opportunities for further application."
+    },
+    {
+      "level": 4,
+      "name": "Exceeded",
+      "description": "The learner demonstrates secure understanding and applies the outcome confidently to unfamiliar situations.",
+      "required_action": "Provide extension activities and more challenging mathematical tasks."
+    }
+  ],
+  "assessment_principles": [
+    "Every assessment must relate to an intended learning outcome.",
+    "Assessment must evaluate understanding as well as procedural accuracy.",
+    "Learners must be given opportunities to demonstrate practical application.",
+    "Feedback must identify strengths and areas requiring improvement.",
+    "Assessment evidence must be recorded and reviewed.",
+    "Learners must receive additional support where expected outcomes have not been achieved."
+  ],
+  "implementation_requirements": {
+    "teacher_responsibility": "Interpret the learning outcomes, plan appropriate learning activities, assess learner achievement and provide corrective support.",
+    "learner_responsibility": "Participate in learning activities, practise mathematical skills and maintain evidence of progress.",
+    "platform_responsibility": "Present learning outcomes, support learning activities and maintain accessible assessment evidence.",
+    "quality_assurance": "Review alignment between curriculum objectives, teaching activities, assessments and demonstrated learner achievement."
+  },
+  "curriculum_alignment_note": "These programme-level outcomes provide an assessment framework. Specific topic-level outcomes, terminology, content coverage and sequencing must be mapped against the official TIE 2023 Form One Mathematics syllabus before final curriculum validation.",
+  "completion_message": "Successful learning in Mathematics is demonstrated when learners can understand concepts, perform calculations, reason logically, solve problems and apply mathematical knowledge independently."
+}
