@@ -1,0 +1,270 @@
+{
+  "module_id": "EA-F1-MATH-2023",
+  "file_id": "EA-F1-MATH-ASSESSMENT-01",
+  "title": "Form One Mathematics Assessment Bank",
+  "version": "1.0.0",
+  "assessment_framework": {
+    "assessment_types": [
+      "Diagnostic Assessment",
+      "Formative Assessment",
+      "Knowledge Check",
+      "Topic Assessment",
+      "Friday Assessment",
+      "Summative Assessment"
+    ],
+    "mastery_threshold_percent": 80,
+    "minimum_pass_percent": 60,
+    "feedback_required": true,
+    "reassessment_allowed": true
+  },
+  "question_bank": [
+    {
+      "question_id": "NUM-001",
+      "unit_id": "F1-MATH-01",
+      "topic": "Numbers",
+      "difficulty": "Easy",
+      "type": "multiple_choice",
+      "question": "Which of the following is a natural number?",
+      "options": ["-4", "0", "6", "2.5"],
+      "correct_answer": "6",
+      "marks": 1,
+      "explanation": "Natural numbers in this programme begin with 1 and continue with positive counting numbers."
+    },
+    {
+      "question_id": "NUM-002",
+      "unit_id": "F1-MATH-01",
+      "topic": "Numbers",
+      "difficulty": "Easy",
+      "type": "multiple_choice",
+      "question": "Which of the following is an integer but not a whole number?",
+      "options": ["5", "0", "-7", "12"],
+      "correct_answer": "-7",
+      "marks": 1,
+      "explanation": "Negative whole numbers are integers but are not whole numbers."
+    },
+    {
+      "question_id": "NUM-003",
+      "unit_id": "F1-MATH-01",
+      "topic": "Factors and Multiples",
+      "difficulty": "Medium",
+      "type": "short_answer",
+      "question": "List all the factors of 12.",
+      "correct_answer": "1, 2, 3, 4, 6, 12",
+      "marks": 3,
+      "marking_guide": [
+        "Award marks for each correct factor, up to 3 marks."
+      ]
+    },
+    {
+      "question_id": "NUM-004",
+      "unit_id": "F1-MATH-01",
+      "topic": "Prime Numbers",
+      "difficulty": "Medium",
+      "type": "short_answer",
+      "question": "Explain why 7 is a prime number.",
+      "correct_answer": "It has exactly two positive factors: 1 and 7.",
+      "marks": 2
+    },
+    {
+      "question_id": "OPS-001",
+      "unit_id": "F1-MATH-02",
+      "topic": "Basic Operations",
+      "difficulty": "Easy",
+      "type": "calculation",
+      "question": "Calculate 245 + 378.",
+      "correct_answer": 623,
+      "marks": 2,
+      "working": "245 + 378 = 623"
+    },
+    {
+      "question_id": "OPS-002",
+      "unit_id": "F1-MATH-02",
+      "topic": "Basic Operations",
+      "difficulty": "Medium",
+      "type": "calculation",
+      "question": "Calculate 84 ÷ 7 × 3.",
+      "correct_answer": 36,
+      "marks": 2,
+      "working": "84 ÷ 7 = 12; 12 × 3 = 36."
+    },
+    {
+      "question_id": "OPS-003",
+      "unit_id": "F1-MATH-02",
+      "topic": "Order of Operations",
+      "difficulty": "Medium",
+      "type": "calculation",
+      "question": "Evaluate 8 + 4 × 3.",
+      "correct_answer": 20,
+      "marks": 2,
+      "working": "Multiplication first: 8 + 12 = 20."
+    },
+    {
+      "question_id": "FDP-001",
+      "unit_id": "F1-MATH-03",
+      "topic": "Fractions",
+      "difficulty": "Easy",
+      "type": "calculation",
+      "question": "Simplify 12/18 to its lowest terms.",
+      "correct_answer": "2/3",
+      "marks": 2,
+      "working": "Divide numerator and denominator by 6."
+    },
+    {
+      "question_id": "FDP-002",
+      "unit_id": "F1-MATH-03",
+      "topic": "Percentages",
+      "difficulty": "Medium",
+      "type": "calculation",
+      "question": "Calculate 15% of 200.",
+      "correct_answer": 30,
+      "marks": 2,
+      "working": "15/100 × 200 = 30."
+    },
+    {
+      "question_id": "ALG-001",
+      "unit_id": "F1-MATH-04",
+      "topic": "Algebra",
+      "difficulty": "Easy",
+      "type": "short_answer",
+      "question": "Identify the variable in the expression 5x + 3.",
+      "correct_answer": "x",
+      "marks": 1
+    },
+    {
+      "question_id": "ALG-002",
+      "unit_id": "F1-MATH-04",
+      "topic": "Algebra",
+      "difficulty": "Medium",
+      "type": "calculation",
+      "question": "Simplify 3x + 2x.",
+      "correct_answer": "5x",
+      "marks": 2,
+      "working": "Combine like terms: 3x + 2x = 5x."
+    },
+    {
+      "question_id": "SET-001",
+      "unit_id": "F1-MATH-05",
+      "topic": "Sets",
+      "difficulty": "Easy",
+      "type": "short_answer",
+      "question": "If A = {1, 2, 3} and B = {2, 3, 4}, find A intersection B.",
+      "correct_answer": "{2, 3}",
+      "marks": 2,
+      "explanation": "The intersection contains elements common to both sets."
+    },
+    {
+      "question_id": "GEO-001",
+      "unit_id": "F1-MATH-06",
+      "topic": "Geometry",
+      "difficulty": "Easy",
+      "type": "multiple_choice",
+      "question": "An angle measuring 90 degrees is called:",
+      "options": [
+        "Acute angle",
+        "Right angle",
+        "Obtuse angle",
+        "Reflex angle"
+      ],
+      "correct_answer": "Right angle",
+      "marks": 1
+    },
+    {
+      "question_id": "GEO-002",
+      "unit_id": "F1-MATH-06",
+      "topic": "Geometry",
+      "difficulty": "Medium",
+      "type": "short_answer",
+      "question": "What is the sum of the interior angles of a triangle?",
+      "correct_answer": "180 degrees",
+      "marks": 2
+    },
+    {
+      "question_id": "MEA-001",
+      "unit_id": "F1-MATH-07",
+      "topic": "Measurement",
+      "difficulty": "Easy",
+      "type": "calculation",
+      "question": "Convert 3 metres into centimetres.",
+      "correct_answer": "300 cm",
+      "marks": 1,
+      "working": "3 × 100 = 300 cm."
+    },
+    {
+      "question_id": "MEA-002",
+      "unit_id": "F1-MATH-07",
+      "topic": "Perimeter",
+      "difficulty": "Medium",
+      "type": "calculation",
+      "question": "A rectangle has length 8 cm and width 5 cm. Calculate its perimeter.",
+      "correct_answer": "26 cm",
+      "marks": 2,
+      "working": "2 × (8 + 5) = 26 cm."
+    },
+    {
+      "question_id": "RAT-001",
+      "unit_id": "F1-MATH-08",
+      "topic": "Ratio",
+      "difficulty": "Medium",
+      "type": "short_answer",
+      "question": "Simplify the ratio 12:18.",
+      "correct_answer": "2:3",
+      "marks": 2,
+      "working": "Divide both terms by 6."
+    },
+    {
+      "question_id": "STA-001",
+      "unit_id": "F1-MATH-09",
+      "topic": "Statistics",
+      "difficulty": "Easy",
+      "type": "short_answer",
+      "question": "What is the main purpose of a frequency table?",
+      "correct_answer": "To organise data by showing how often each value or category occurs.",
+      "marks": 2
+    },
+    {
+      "question_id": "COO-001",
+      "unit_id": "F1-MATH-10",
+      "topic": "Coordinates",
+      "difficulty": "Easy",
+      "type": "short_answer",
+      "question": "Write the ordered pair for a point with x-coordinate 3 and y-coordinate 5.",
+      "correct_answer": "(3, 5)",
+      "marks": 1
+    }
+  ],
+  "marking_policy": {
+    "objective_questions": "Award marks for correct answers.",
+    "structured_questions": "Award method marks and accuracy marks according to the marking guide.",
+    "working": "Require mathematical working where appropriate.",
+    "partial_credit": true,
+    "feedback": "Provide corrective explanations for incorrect responses."
+  },
+  "performance_bands": [
+    {
+      "minimum_percent": 80,
+      "maximum_percent": 100,
+      "classification": "Mastery",
+      "action": "Proceed to enrichment or the next learning objective."
+    },
+    {
+      "minimum_percent": 60,
+      "maximum_percent": 79,
+      "classification": "Developing Competence",
+      "action": "Provide targeted practice and reassessment."
+    },
+    {
+      "minimum_percent": 0,
+      "maximum_percent": 59,
+      "classification": "Needs Support",
+      "action": "Provide guided instruction, remedial practice and reassessment."
+    }
+  ],
+  "learner_evidence": [
+    "Question responses",
+    "Assessment scores",
+    "Mathematical working",
+    "Teacher feedback",
+    "Reassessment records",
+    "Mastery progression"
+  ]
+}
