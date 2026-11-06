@@ -1,0 +1,197 @@
+{
+  "module_id": "EA-F1-MATH-2023",
+  "module_name": "Education Access E-Learning Academy — Form One Mathematics",
+  "document_type": "learner_guide",
+  "title": "Form One Mathematics Learner Guide",
+  "level": "Form One",
+  "purpose": "To guide learners in studying Mathematics independently and collaboratively, completing learning activities, preparing for assessments, and demonstrating mastery.",
+  "how_to_use_this_guide": [
+    "Study the lesson objectives before beginning each topic.",
+    "Follow the learning stages in the order provided.",
+    "Read explanations carefully and study worked examples.",
+    "Complete practice questions before checking answers.",
+    "Record difficult concepts and questions for discussion with the teacher.",
+    "Use assessment feedback to identify areas that need further study.",
+    "Keep your mathematical work, reflections, and assessment evidence organised."
+  ],
+  "learning_sequence": [
+    {
+      "stage": 1,
+      "name": "Discover",
+      "purpose": "Connect the new topic to prior knowledge and everyday experience.",
+      "learner_actions": [
+        "Read the opening question or situation.",
+        "Think about what you already know.",
+        "Attempt the introductory question.",
+        "Identify what you would like to understand."
+      ],
+      "evidence": "An initial response, observation, or question."
+    },
+    {
+      "stage": 2,
+      "name": "Learn",
+      "purpose": "Develop understanding of mathematical concepts, rules, symbols, and procedures.",
+      "learner_actions": [
+        "Read the lesson explanation.",
+        "Study definitions and worked examples.",
+        "Copy important mathematical rules into your notebook.",
+        "Ask for clarification when an explanation is unclear."
+      ],
+      "evidence": "Accurate notes and explanations of key concepts."
+    },
+    {
+      "stage": 3,
+      "name": "Practice",
+      "purpose": "Develop accuracy, confidence, and fluency through mathematical exercises.",
+      "learner_actions": [
+        "Attempt each exercise independently before seeking help.",
+        "Show all important calculation steps.",
+        "Check calculations where possible.",
+        "Correct errors and understand why they occurred."
+      ],
+      "evidence": "Completed exercises with clear working."
+    },
+    {
+      "stage": 4,
+      "name": "Knowledge Check",
+      "purpose": "Determine whether the main concepts and procedures have been understood.",
+      "learner_actions": [
+        "Answer questions without looking at the worked examples.",
+        "Read each question carefully.",
+        "Review incorrect answers.",
+        "Repeat relevant practice where necessary."
+      ],
+      "evidence": "Knowledge-check responses and identified learning gaps."
+    },
+    {
+      "stage": 5,
+      "name": "Apply",
+      "purpose": "Use mathematical knowledge to solve practical and unfamiliar problems.",
+      "learner_actions": [
+        "Identify the information provided in a problem.",
+        "Determine what needs to be calculated.",
+        "Select an appropriate mathematical method.",
+        "Show the solution and explain the result."
+      ],
+      "evidence": "A correctly reasoned solution to an application task."
+    },
+    {
+      "stage": 6,
+      "name": "Voice",
+      "purpose": "Develop mathematical communication and confidence.",
+      "learner_actions": [
+        "Explain a mathematical idea in your own words.",
+        "Describe how you solved a problem.",
+        "Present a question or observation.",
+        "Participate respectfully in mathematical discussions."
+      ],
+      "evidence": "An oral explanation, presentation, or recorded response."
+    },
+    {
+      "stage": 7,
+      "name": "Journal",
+      "purpose": "Encourage reflection, independent thinking, and awareness of learning progress.",
+      "learner_actions": [
+        "Write what you learned.",
+        "Identify the concept you found most difficult.",
+        "Record questions that remain unanswered.",
+        "Describe how you can improve your work."
+      ],
+      "evidence": "A dated learning reflection."
+    },
+    {
+      "stage": 8,
+      "name": "Friday Assessment",
+      "purpose": "Review learning and evaluate progress at the end of the learning week.",
+      "learner_actions": [
+        "Revise the topics covered during the week.",
+        "Complete the assessment independently.",
+        "Observe the assessment instructions and time limits.",
+        "Review feedback and correct mistakes."
+      ],
+      "evidence": "A completed weekly assessment and reviewed feedback."
+    },
+    {
+      "stage": 9,
+      "name": "Evidence and Mastery",
+      "purpose": "Demonstrate that the required knowledge and skills have been achieved.",
+      "learner_actions": [
+        "Organise completed exercises and assessments.",
+        "Present evidence of practical applications.",
+        "Review any outcomes that have not yet been achieved.",
+        "Complete additional learning activities where necessary."
+      ],
+      "evidence": "A portfolio of work demonstrating progress and achievement."
+    }
+  ],
+  "independent_study_guidance": {
+    "recommended_routine": [
+      "Prepare a quiet study space and the required materials.",
+      "Read the lesson objectives before studying.",
+      "Work through explanations and examples carefully.",
+      "Attempt exercises independently.",
+      "Review mistakes and write down questions.",
+      "Summarise the main learning points."
+    ],
+    "study_materials": [
+      "Mathematics notebook",
+      "Pen and pencil",
+      "Ruler",
+      "Eraser",
+      "Mathematical instruments when required",
+      "Calculator only where permitted by the teacher or assessment instructions"
+    ],
+    "study_principles": [
+      "Show your working rather than recording answers alone.",
+      "Practise regularly instead of waiting until assessment day.",
+      "Do not copy another learner's work.",
+      "Ask for support when you encounter persistent difficulty.",
+      "Respect mathematical accuracy, honesty, and academic integrity."
+    ]
+  },
+  "when_you_find_a_topic_difficult": [
+    "Return to the relevant explanation.",
+    "Study the worked examples again.",
+    "Try a simpler question before attempting a harder one.",
+    "Identify the exact step you do not understand.",
+    "Ask your teacher or learning facilitator for assistance.",
+    "Complete further practice before attempting the knowledge check again."
+  ],
+  "assessment_guidance": {
+    "before_assessment": [
+      "Review lesson notes and important mathematical rules.",
+      "Practise questions from the relevant topic.",
+      "Prepare the permitted materials.",
+      "Read the instructions carefully."
+    ],
+    "during_assessment": [
+      "Read every question before answering.",
+      "Manage your time carefully.",
+      "Show calculations and reasoning.",
+      "Check answers where time permits."
+    ],
+    "after_assessment": [
+      "Review the teacher's feedback.",
+      "Identify errors and their causes.",
+      "Correct incorrect solutions.",
+      "Complete additional practice where required."
+    ]
+  },
+  "mastery_expectations": {
+    "understanding": "Explain the mathematical concepts and use relevant terminology correctly.",
+    "procedural_fluency": "Apply appropriate mathematical methods accurately.",
+    "reasoning": "Explain the steps used to reach a solution.",
+    "application": "Use mathematical knowledge to solve practical problems.",
+    "communication": "Present mathematical work clearly using appropriate symbols, diagrams, and explanations.",
+    "independence": "Complete learning tasks responsibly and demonstrate academic integrity."
+  },
+  "learner_commitment": [
+    "I will participate actively in Mathematics lessons.",
+    "I will practise regularly and complete assigned activities.",
+    "I will show my working and take responsibility for my learning.",
+    "I will learn from mistakes and use feedback constructively.",
+    "I will respect teachers and other learners.",
+    "I will maintain evidence of my learning and progress."
+  ],
+  "completion_message": "Mathematical mastery develops through understanding, practice, reasoning, application, reflection, and consistent effort."
+}
