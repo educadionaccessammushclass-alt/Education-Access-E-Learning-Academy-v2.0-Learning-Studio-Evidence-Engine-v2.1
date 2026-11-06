@@ -1,0 +1,300 @@
+{
+  "module_id": "EA-F1-MATH-2023",
+  "module_name": "Education Access E-Learning Academy — Form One Mathematics",
+  "document_type": "assessment_framework",
+  "title": "Form One Mathematics Assessment Framework",
+  "level": "Form One",
+  "purpose": "To establish a structured, continuous and evidence-based assessment system for measuring mathematical knowledge, understanding, procedural fluency, reasoning, application and learner mastery.",
+  "assessment_principles": [
+    "Assessment must align with the approved curriculum and intended learning outcomes.",
+    "Assessment must measure understanding as well as procedural accuracy.",
+    "Learners must receive regular and constructive feedback.",
+    "Assessment must provide opportunities for independent mathematical thinking.",
+    "Assessment evidence must be accurate, authentic and properly recorded.",
+    "Assessment results must inform teaching, learning support and progression.",
+    "Assessment must promote fairness, accessibility and academic integrity."
+  ],
+  "assessment_types": [
+    {
+      "assessment_id": "AF01",
+      "name": "Diagnostic Assessment",
+      "timing": "Before beginning a new topic or learning unit.",
+      "purpose": "Identify learners' existing knowledge, prior understanding and possible learning gaps.",
+      "methods": [
+        "Entry questions",
+        "Short diagnostic exercises",
+        "Prior knowledge discussions",
+        "Initial problem-solving tasks"
+      ],
+      "evidence": [
+        "Diagnostic responses",
+        "Identified learning gaps",
+        "Initial learner performance records"
+      ]
+    },
+    {
+      "assessment_id": "AF02",
+      "name": "Formative Assessment",
+      "timing": "Throughout the teaching and learning process.",
+      "purpose": "Monitor understanding and provide feedback while learning is taking place.",
+      "methods": [
+        "Class exercises",
+        "Guided practice",
+        "Question-and-answer activities",
+        "Short written tasks",
+        "Teacher observations"
+      ],
+      "evidence": [
+        "Exercise records",
+        "Teacher feedback",
+        "Corrected work",
+        "Participation records"
+      ]
+    },
+    {
+      "assessment_id": "AF03",
+      "name": "Knowledge Check",
+      "timing": "At the end of an appropriate lesson or learning unit.",
+      "purpose": "Determine whether learners understand the concepts and procedures taught.",
+      "methods": [
+        "Multiple-choice questions",
+        "Short-answer questions",
+        "Calculations",
+        "Concept identification",
+        "Mathematical explanations"
+      ],
+      "evidence": [
+        "Knowledge-check scores",
+        "Corrected responses",
+        "Documented misconceptions"
+      ]
+    },
+    {
+      "assessment_id": "AF04",
+      "name": "Application Assessment",
+      "timing": "After relevant concepts and procedures have been taught.",
+      "purpose": "Evaluate the ability to apply mathematical knowledge to practical and unfamiliar situations.",
+      "methods": [
+        "Real-life mathematical problems",
+        "Investigative activities",
+        "Practical assignments",
+        "Mathematical modelling",
+        "Problem-solving tasks"
+      ],
+      "evidence": [
+        "Completed application tasks",
+        "Working and explanations",
+        "Practical solutions"
+      ]
+    },
+    {
+      "assessment_id": "AF05",
+      "name": "Friday Weekly Assessment",
+      "timing": "At the end of each learning week.",
+      "purpose": "Review and evaluate the mathematical knowledge and skills developed during the week.",
+      "methods": [
+        "Structured weekly tests",
+        "Calculation exercises",
+        "Problem-solving questions",
+        "Conceptual questions",
+        "Application problems"
+      ],
+      "evidence": [
+        "Weekly assessment scripts",
+        "Assessment scores",
+        "Teacher feedback",
+        "Corrected mathematical solutions"
+      ]
+    },
+    {
+      "assessment_id": "AF06",
+      "name": "Summative Assessment",
+      "timing": "At the end of a defined topic, term or programme assessment period.",
+      "purpose": "Evaluate the extent to which intended curriculum outcomes have been achieved.",
+      "methods": [
+        "Topic tests",
+        "Term examinations",
+        "Structured written assessments",
+        "Integrated problem-solving tasks"
+      ],
+      "evidence": [
+        "Summative assessment scripts",
+        "Recorded results",
+        "Outcome achievement reports"
+      ]
+    },
+    {
+      "assessment_id": "AF07",
+      "name": "Evidence and Mastery Assessment",
+      "timing": "Throughout the programme and at designated mastery review points.",
+      "purpose": "Verify mathematical competence through multiple forms of learner evidence.",
+      "methods": [
+        "Portfolio review",
+        "Selected mathematical exercises",
+        "Practical application tasks",
+        "Oral explanations",
+        "Assessment performance records"
+      ],
+      "evidence": [
+        "Learner portfolio",
+        "Mastery records",
+        "Teacher validation",
+        "Documented progression decisions"
+      ]
+    }
+  ],
+  "assessment_components": [
+    {
+      "component": "Discover",
+      "assessment_focus": "Prior knowledge and initial understanding.",
+      "evidence": "Introductory responses and observations."
+    },
+    {
+      "component": "Learn",
+      "assessment_focus": "Understanding of concepts and mathematical procedures.",
+      "evidence": "Notes, explanations and responses to instructional questions."
+    },
+    {
+      "component": "Practice",
+      "assessment_focus": "Accuracy, fluency and correct application of procedures.",
+      "evidence": "Completed exercises and worked solutions."
+    },
+    {
+      "component": "Knowledge Check",
+      "assessment_focus": "Independent understanding of lesson objectives.",
+      "evidence": "Knowledge-check responses."
+    },
+    {
+      "component": "Apply",
+      "assessment_focus": "Transfer of mathematical knowledge to practical problems.",
+      "evidence": "Application tasks and problem-solving solutions."
+    },
+    {
+      "component": "Voice",
+      "assessment_focus": "Mathematical communication and reasoning.",
+      "evidence": "Oral explanations and presentations."
+    },
+    {
+      "component": "Journal",
+      "assessment_focus": "Reflection and identification of learning needs.",
+      "evidence": "Learner reflections."
+    },
+    {
+      "component": "Friday Assessment",
+      "assessment_focus": "Weekly achievement and retention.",
+      "evidence": "Completed weekly assessment."
+    },
+    {
+      "component": "Evidence and Mastery",
+      "assessment_focus": "Demonstrated competence across learning outcomes.",
+      "evidence": "Validated learner portfolio."
+    }
+  ],
+  "assessment_rubric": {
+    "criteria": [
+      {
+        "criterion": "Conceptual Understanding",
+        "description": "Ability to explain mathematical concepts and relationships."
+      },
+      {
+        "criterion": "Procedural Accuracy",
+        "description": "Ability to select and perform appropriate mathematical procedures."
+      },
+      {
+        "criterion": "Reasoning",
+        "description": "Ability to explain and justify mathematical solutions."
+      },
+      {
+        "criterion": "Application",
+        "description": "Ability to solve mathematical problems in practical contexts."
+      },
+      {
+        "criterion": "Communication",
+        "description": "Ability to present mathematical ideas and solutions clearly."
+      }
+    ],
+    "performance_levels": [
+      {
+        "level": 1,
+        "name": "Beginning",
+        "description": "Requires substantial guidance and demonstrates limited understanding."
+      },
+      {
+        "level": 2,
+        "name": "Developing",
+        "description": "Demonstrates partial understanding and completes familiar tasks with support."
+      },
+      {
+        "level": 3,
+        "name": "Proficient",
+        "description": "Demonstrates secure understanding and independently completes expected tasks."
+      },
+      {
+        "level": 4,
+        "name": "Advanced",
+        "description": "Demonstrates strong understanding and applies mathematical reasoning to unfamiliar problems."
+      }
+    ]
+  },
+  "scoring_guidance": {
+    "principle": "Assessment scores must reflect the requirements and learning outcomes of the specific assessment.",
+    "rules": [
+      "Allocate marks according to the assessment instrument.",
+      "Award marks for valid mathematical methods and reasoning where appropriate.",
+      "Apply consistent marking criteria.",
+      "Record actual scores and maximum available marks.",
+      "Provide written feedback where necessary.",
+      "Do not treat completion of learning activities as automatic evidence of mastery."
+    ],
+    "grading_note": "Specific grading boundaries, examination weightings and institutional reporting scales must be configured according to applicable national and institutional assessment requirements."
+  },
+  "feedback_and_remediation": {
+    "feedback_requirements": [
+      "Identify demonstrated strengths.",
+      "Explain errors and misconceptions.",
+      "Indicate which learning outcomes require further development.",
+      "Recommend appropriate corrective activities.",
+      "Provide opportunities for reassessment."
+    ],
+    "remediation_process": [
+      "Identify the unmet learning outcome.",
+      "Analyse the learner's errors.",
+      "Provide additional instruction.",
+      "Assign targeted practice.",
+      "Conduct a follow-up assessment.",
+      "Record the revised achievement status."
+    ]
+  },
+  "learner_progress_tracking": {
+    "required_records": [
+      "Learner identification",
+      "Topic and learning unit",
+      "Assessment type",
+      "Assessment date",
+      "Score obtained",
+      "Maximum available score",
+      "Learning outcomes assessed",
+      "Teacher feedback",
+      "Remediation status",
+      "Mastery decision"
+    ],
+    "progression_rule": "Progression decisions must be based on relevant and sufficient assessment evidence, professional teacher judgement and demonstrated learning outcomes."
+  },
+  "quality_assurance": {
+    "validity": "Assessment must measure the intended mathematical knowledge and competencies.",
+    "reliability": "Marking criteria must support consistent assessment decisions.",
+    "fairness": "Assessment conditions must be appropriate and equitable.",
+    "authenticity": "Learner evidence must represent genuine individual performance.",
+    "transparency": "Assessment instructions and expectations must be communicated clearly.",
+    "curriculum_alignment": "Assessment instruments must be checked against the applicable TIE 2023 Form One Mathematics curriculum.",
+    "record_management": "Assessment records must be maintained accurately and securely."
+  },
+  "implementation_responsibilities": {
+    "learner": "Participate in assessments, complete assigned tasks honestly and use feedback to improve.",
+    "teacher": "Design assessments, evaluate performance, provide feedback and validate mastery.",
+    "learning_facilitator": "Support learner participation and identify learning difficulties.",
+    "platform": "Organise assessment activities, display permitted results and maintain learner evidence records.",
+    "academic_administration": "Monitor assessment quality, curriculum alignment and institutional reporting."
+  },
+  "completion_message": "Assessment is not simply the measurement of marks. It is a continuous process of understanding, feedback, improvement and verified mathematical achievement."
+}
