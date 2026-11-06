@@ -1,0 +1,197 @@
+{
+  "module_id": "EA-F1-MATH-2023",
+  "module_name": "Education Access E-Learning Academy — Form One Mathematics",
+  "subject": "Mathematics",
+  "level": "Form One",
+  "curriculum_framework": "Tanzania Institute of Education (TIE)",
+  "curriculum_reference": "2023",
+  "language": "English",
+  "version": "1.0.0",
+  "status": "Independent Curriculum Package",
+  "description": "A structured, competency-based Form One Mathematics programme designed to develop mathematical knowledge, conceptual understanding, procedural fluency, reasoning, problem-solving and practical application.",
+  "learning_approach": [
+    "Discover",
+    "Learn",
+    "Practice",
+    "Knowledge Check",
+    "Apply",
+    "Voice",
+    "Journal",
+    "Friday Assessment",
+    "Evidence and Mastery"
+  ],
+  "curriculum_aims": [
+    "Develop mathematical literacy and confidence.",
+    "Build conceptual understanding of mathematical principles.",
+    "Develop accuracy and fluency in mathematical operations.",
+    "Apply mathematical knowledge to everyday situations.",
+    "Strengthen logical reasoning and problem-solving.",
+    "Develop independent learning and mathematical communication."
+  ],
+  "competencies": [
+    "Mathematical reasoning",
+    "Problem-solving",
+    "Critical thinking",
+    "Numerical literacy",
+    "Mathematical communication",
+    "Application of mathematics in daily life"
+  ],
+  "units": [
+    {
+      "unit_id": "F1-MATH-01",
+      "title": "Numbers",
+      "topics": [
+        "Natural numbers",
+        "Whole numbers",
+        "Integers",
+        "Factors and multiples",
+        "Prime numbers",
+        "Fractions",
+        "Decimals",
+        "Percentages"
+      ]
+    },
+    {
+      "unit_id": "F1-MATH-02",
+      "title": "Basic Operations",
+      "topics": [
+        "Addition",
+        "Subtraction",
+        "Multiplication",
+        "Division",
+        "Order of operations",
+        "Estimation and approximation"
+      ]
+    },
+    {
+      "unit_id": "F1-MATH-03",
+      "title": "Fractions, Decimals and Percentages",
+      "topics": [
+        "Equivalent fractions",
+        "Comparing fractions",
+        "Operations involving fractions",
+        "Decimal operations",
+        "Percentage calculations",
+        "Conversions between fractions, decimals and percentages"
+      ]
+    },
+    {
+      "unit_id": "F1-MATH-04",
+      "title": "Introduction to Algebra",
+      "topics": [
+        "Algebraic symbols",
+        "Variables and constants",
+        "Algebraic expressions",
+        "Simplification",
+        "Substitution",
+        "Simple equations"
+      ]
+    },
+    {
+      "unit_id": "F1-MATH-05",
+      "title": "Sets",
+      "topics": [
+        "Meaning of sets",
+        "Representation of sets",
+        "Elements of sets",
+        "Types of sets",
+        "Subsets",
+        "Union and intersection"
+      ]
+    },
+    {
+      "unit_id": "F1-MATH-06",
+      "title": "Geometry",
+      "topics": [
+        "Points, lines and planes",
+        "Angles",
+        "Types of angles",
+        "Parallel and perpendicular lines",
+        "Triangles",
+        "Quadrilaterals",
+        "Properties of geometric shapes"
+      ]
+    },
+    {
+      "unit_id": "F1-MATH-07",
+      "title": "Measurement",
+      "topics": [
+        "Units of length",
+        "Units of mass",
+        "Units of capacity",
+        "Time",
+        "Perimeter",
+        "Area",
+        "Unit conversions"
+      ]
+    },
+    {
+      "unit_id": "F1-MATH-08",
+      "title": "Ratio and Proportion",
+      "topics": [
+        "Meaning of ratio",
+        "Simplifying ratios",
+        "Equivalent ratios",
+        "Direct proportion",
+        "Practical applications"
+      ]
+    },
+    {
+      "unit_id": "F1-MATH-09",
+      "title": "Introduction to Statistics",
+      "topics": [
+        "Collection of data",
+        "Organisation of data",
+        "Frequency tables",
+        "Pictograms",
+        "Bar charts",
+        "Interpretation of data"
+      ]
+    },
+    {
+      "unit_id": "F1-MATH-10",
+      "title": "Introduction to Coordinate Geometry",
+      "topics": [
+        "The Cartesian plane",
+        "Horizontal and vertical axes",
+        "Ordered pairs",
+        "Plotting points",
+        "Reading coordinates"
+      ]
+    }
+  ],
+  "assessment_framework": {
+    "continuous_assessment": [
+      "Topic exercises",
+      "Knowledge checks",
+      "Practical mathematical tasks",
+      "Learner journals",
+      "Weekly assessments"
+    ],
+    "summative_assessment": [
+      "Unit assessments",
+      "Mid-term assessment",
+      "End-of-term assessment"
+    ],
+    "mastery_evidence": [
+      "Demonstrated conceptual understanding",
+      "Accurate mathematical procedures",
+      "Independent problem-solving",
+      "Practical application",
+      "Assessment performance"
+    ]
+  },
+  "learner_support": {
+    "remedial_learning": true,
+    "guided_practice": true,
+    "independent_practice": true,
+    "enrichment_activities": true,
+    "teacher_feedback": true
+  },
+  "implementation": {
+    "delivery_mode": "Digital and classroom-supported learning",
+    "progress_tracking": true,
+    "learner_portfolio": true,
+    "evidence_collection": true
+  }
+}
