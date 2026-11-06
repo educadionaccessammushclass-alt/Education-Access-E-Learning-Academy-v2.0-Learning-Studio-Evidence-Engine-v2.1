@@ -1,0 +1,235 @@
+{
+  "module_id": "EA-F1-MATH-2023",
+  "file_id": "EA-F1-MATH-ACTIVITIES-01",
+  "title": "Form One Mathematics Learning Activities",
+  "version": "1.0.0",
+  "purpose": "Provide structured activities that enable learners to discover, practise, apply and demonstrate mathematical competencies.",
+  "activity_categories": [
+    "Discovery",
+    "Guided Practice",
+    "Independent Practice",
+    "Collaborative Learning",
+    "Problem Solving",
+    "Practical Application",
+    "Reflection"
+  ],
+  "learning_activities": [
+    {
+      "activity_id": "ACT-001",
+      "unit_id": "F1-MATH-01",
+      "title": "Numbers in Our Community",
+      "type": "Discovery",
+      "instructions": "Identify at least ten examples of numbers in your home, school or community.",
+      "tasks": [
+        "Record numbers found on clocks, calendars and classroom doors.",
+        "Identify numbers used in counting money and measuring quantities.",
+        "Classify the numbers as natural numbers, whole numbers or integers where applicable.",
+        "Explain two ways numbers are useful in everyday life."
+      ],
+      "expected_evidence": [
+        "Completed number observation list",
+        "Correct number classification",
+        "Written explanation"
+      ]
+    },
+    {
+      "activity_id": "ACT-002",
+      "unit_id": "F1-MATH-02",
+      "title": "The Mathematics Market",
+      "type": "Practical Application",
+      "instructions": "Simulate a market transaction using imaginary Tanzanian shillings.",
+      "scenario": "A learner purchases three exercise books at TZS 2,000 each and two pens at TZS 1,000 each.",
+      "tasks": [
+        "Calculate the cost of the exercise books.",
+        "Calculate the cost of the pens.",
+        "Determine the total amount spent.",
+        "Calculate the change from TZS 10,000."
+      ],
+      "expected_evidence": [
+        "Correct multiplication",
+        "Correct addition",
+        "Correct subtraction",
+        "Explanation of calculations"
+      ]
+    },
+    {
+      "activity_id": "ACT-003",
+      "unit_id": "F1-MATH-03",
+      "title": "Fractions in Daily Life",
+      "type": "Collaborative Learning",
+      "instructions": "Use drawings or paper shapes to demonstrate fractions.",
+      "tasks": [
+        "Divide a paper rectangle into two equal parts.",
+        "Shade one-half.",
+        "Divide another rectangle into four equal parts and shade three-quarters.",
+        "Explain the meaning of numerator and denominator.",
+        "Compare one-half and three-quarters."
+      ],
+      "expected_evidence": [
+        "Fraction diagrams",
+        "Correct identification of numerator and denominator",
+        "Comparison explanation"
+      ]
+    },
+    {
+      "activity_id": "ACT-004",
+      "unit_id": "F1-MATH-04",
+      "title": "Algebra Around Us",
+      "type": "Problem Solving",
+      "instructions": "Translate everyday statements into algebraic expressions.",
+      "tasks": [
+        "Represent a number using the variable x.",
+        "Express five more than a number.",
+        "Express three times a number.",
+        "Evaluate 3x + 5 when x = 4.",
+        "Explain what the variable represents."
+      ],
+      "expected_evidence": [
+        "Correct algebraic expressions",
+        "Accurate substitution",
+        "Explanation of variable usage"
+      ]
+    },
+    {
+      "activity_id": "ACT-005",
+      "unit_id": "F1-MATH-05",
+      "title": "Classifying Sets",
+      "type": "Guided Practice",
+      "instructions": "Use diagrams to organise objects into sets.",
+      "tasks": [
+        "Create a set of even numbers below 12.",
+        "Create a set of odd numbers below 12.",
+        "Identify elements common to both sets.",
+        "Represent the sets using appropriate notation.",
+        "Explain the meaning of union and intersection."
+      ],
+      "expected_evidence": [
+        "Set notation",
+        "Set diagrams",
+        "Correct identification of elements"
+      ]
+    },
+    {
+      "activity_id": "ACT-006",
+      "unit_id": "F1-MATH-06",
+      "title": "Geometry Hunt",
+      "type": "Discovery",
+      "instructions": "Identify geometric shapes and angles in your surroundings.",
+      "tasks": [
+        "Identify three rectangular objects.",
+        "Find examples of parallel lines.",
+        "Identify right angles.",
+        "Draw a triangle and a quadrilateral.",
+        "Describe one property of each shape."
+      ],
+      "expected_evidence": [
+        "Observation record",
+        "Geometric drawings",
+        "Written descriptions"
+      ]
+    },
+    {
+      "activity_id": "ACT-007",
+      "unit_id": "F1-MATH-07",
+      "title": "Measure Your Classroom",
+      "type": "Practical Application",
+      "instructions": "Use a measuring tape or ruler to investigate classroom measurements.",
+      "tasks": [
+        "Measure the length of the classroom.",
+        "Measure its width.",
+        "Convert the measurements into centimetres.",
+        "Calculate the classroom perimeter.",
+        "Calculate the area using the rectangular model."
+      ],
+      "expected_evidence": [
+        "Measurement records",
+        "Correct unit conversions",
+        "Perimeter calculation",
+        "Area calculation"
+      ]
+    },
+    {
+      "activity_id": "ACT-008",
+      "unit_id": "F1-MATH-08",
+      "title": "Mixing Quantities",
+      "type": "Problem Solving",
+      "instructions": "Investigate ratios using practical quantities.",
+      "scenario": "A mixture uses two cups of water for every one cup of juice concentrate.",
+      "tasks": [
+        "Write the water-to-concentrate ratio.",
+        "Calculate the quantities needed for six cups of concentrate.",
+        "Determine the total quantity of the mixture.",
+        "Explain why the ratio remains constant."
+      ],
+      "expected_evidence": [
+        "Correct ratio",
+        "Accurate proportional calculations",
+        "Explanation of proportional relationships"
+      ]
+    },
+    {
+      "activity_id": "ACT-009",
+      "unit_id": "F1-MATH-09",
+      "title": "Classroom Data Investigation",
+      "type": "Collaborative Learning",
+      "instructions": "Collect and organise simple information from classmates.",
+      "tasks": [
+        "Choose a simple survey question.",
+        "Collect responses from at least ten learners.",
+        "Organise responses into a frequency table.",
+        "Construct a bar chart.",
+        "Write three observations from the collected data."
+      ],
+      "expected_evidence": [
+        "Collected data",
+        "Frequency table",
+        "Bar chart",
+        "Interpretation"
+      ]
+    },
+    {
+      "activity_id": "ACT-010",
+      "unit_id": "F1-MATH-10",
+      "title": "The Coordinate Treasure Hunt",
+      "type": "Independent Practice",
+      "instructions": "Use a coordinate grid to locate specified points.",
+      "tasks": [
+        "Draw a Cartesian coordinate plane.",
+        "Label the horizontal and vertical axes.",
+        "Plot (2, 3).",
+        "Plot (4, 1).",
+        "Plot (3, 5).",
+        "Explain how ordered pairs identify positions."
+      ],
+      "expected_evidence": [
+        "Correctly labelled coordinate plane",
+        "Accurately plotted points",
+        "Written explanation"
+      ]
+    }
+  ],
+  "reflection_framework": {
+    "questions": [
+      "What did I discover?",
+      "What mathematical skill did I practise?",
+      "Which problem challenged me?",
+      "How did I solve it?",
+      "Where can I apply this knowledge?",
+      "What should I improve?"
+    ]
+  },
+  "assessment_guidance": {
+    "teacher_observation": true,
+    "learner_self_assessment": true,
+    "peer_assessment": true,
+    "practical_evidence": true,
+    "feedback_required": true
+  },
+  "mastery_requirements": {
+    "activity_completion": true,
+    "conceptual_understanding": true,
+    "practical_application": true,
+    "learner_reflection": true,
+    "teacher_verification": true
+  }
+}
