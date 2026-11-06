@@ -1,0 +1,209 @@
+{
+  "module_id": "EA-F1-MATH-2023",
+  "file_id": "EA-F1-MATH-TEACHING-01",
+  "title": "Form One Mathematics Teaching Content",
+  "version": "1.0.0",
+  "language": "English",
+  "learning_sequence": [
+    "Discover",
+    "Learn",
+    "Practice",
+    "Knowledge Check",
+    "Apply",
+    "Voice",
+    "Journal",
+    "Friday Assessment",
+    "Evidence and Mastery"
+  ],
+  "lessons": [
+    {
+      "lesson_id": "F1-MATH-01-L01",
+      "unit_id": "F1-MATH-01",
+      "unit_title": "Numbers",
+      "lesson_title": "Introduction to Numbers",
+      "duration_minutes": 40,
+      "learning_objectives": [
+        "Explain what numbers are.",
+        "Identify natural numbers and whole numbers.",
+        "Distinguish between natural numbers, whole numbers and integers.",
+        "Classify numbers using examples."
+      ],
+      "discover": {
+        "title": "Numbers Around Us",
+        "prompt": "Look around your home, school or community. Where do you encounter numbers?",
+        "activities": [
+          "Identify numbers on a clock.",
+          "Observe numbers on a classroom door or house.",
+          "Identify numbers used when counting books, people or money."
+        ],
+        "reflection_question": "Why would everyday life become difficult without numbers?"
+      },
+      "learn": {
+        "title": "Understanding Numbers",
+        "explanation": "Numbers are mathematical symbols used to count, measure, compare and describe quantities.",
+        "concepts": [
+          {
+            "name": "Natural Numbers",
+            "definition": "Counting numbers beginning with 1.",
+            "examples": ["1", "2", "3", "4", "5", "6"]
+          },
+          {
+            "name": "Whole Numbers",
+            "definition": "Natural numbers together with zero.",
+            "examples": ["0", "1", "2", "3", "4", "5"]
+          },
+          {
+            "name": "Integers",
+            "definition": "Positive whole numbers, negative whole numbers and zero.",
+            "examples": ["-3", "-2", "-1", "0", "1", "2", "3"]
+          }
+        ],
+        "worked_examples": [
+          {
+            "question": "Is 7 a natural number?",
+            "solution": "Yes. Seven is a counting number.",
+            "answer": "Yes"
+          },
+          {
+            "question": "Is 0 a whole number?",
+            "solution": "Yes. Zero belongs to the set of whole numbers.",
+            "answer": "Yes"
+          },
+          {
+            "question": "Is -4 an integer?",
+            "solution": "Yes. Negative whole numbers are integers.",
+            "answer": "Yes"
+          }
+        ],
+        "key_point": "Every natural number is a whole number, and every whole number is an integer. Zero is not included in the natural numbers under the convention used in this lesson."
+      },
+      "practice": {
+        "instructions": "Classify each number according to the number system.",
+        "questions": [
+          {
+            "id": "P1",
+            "question": "Classify the number 5.",
+            "expected_answer": "Natural number, whole number and integer."
+          },
+          {
+            "id": "P2",
+            "question": "Classify the number 0.",
+            "expected_answer": "Whole number and integer."
+          },
+          {
+            "id": "P3",
+            "question": "Classify the number -8.",
+            "expected_answer": "Integer."
+          },
+          {
+            "id": "P4",
+            "question": "Write three examples of natural numbers.",
+            "expected_answer": "Any three positive counting numbers."
+          }
+        ]
+      },
+      "knowledge_check": {
+        "instructions": "Answer the following questions without looking at the lesson notes.",
+        "questions": [
+          {
+            "id": "K1",
+            "type": "multiple_choice",
+            "question": "Which of the following is a whole number?",
+            "options": ["-5", "0", "2.5", "-1.5"],
+            "correct_answer": "0"
+          },
+          {
+            "id": "K2",
+            "type": "multiple_choice",
+            "question": "Which number is an integer but not a whole number?",
+            "options": ["4", "0", "-3", "8"],
+            "correct_answer": "-3"
+          },
+          {
+            "id": "K3",
+            "type": "short_answer",
+            "question": "What is the difference between natural numbers and whole numbers?",
+            "expected_answer": "Whole numbers include zero, while natural numbers in this lesson begin at one."
+          }
+        ],
+        "pass_mark_percent": 60
+      },
+      "apply": {
+        "title": "Mathematics in Daily Life",
+        "scenario": "A learner records the temperature of a town as -2 degrees Celsius in the morning and 5 degrees Celsius in the afternoon.",
+        "tasks": [
+          "Identify the negative temperature.",
+          "Identify the positive temperature.",
+          "Explain why negative numbers are useful when recording temperature."
+        ]
+      },
+      "voice": {
+        "prompt": "Explain the difference between natural numbers, whole numbers and integers in your own words.",
+        "response_mode": "Audio or written response",
+        "assessment_focus": [
+          "Conceptual understanding",
+          "Mathematical vocabulary",
+          "Clarity of explanation"
+        ]
+      },
+      "journal": {
+        "prompts": [
+          "What new mathematical idea did I learn today?",
+          "Which part was difficult?",
+          "Where can I use this knowledge in everyday life?",
+          "What do I need to practise further?"
+        ]
+      },
+      "friday_assessment": {
+        "title": "Numbers — Weekly Assessment",
+        "questions": [
+          {
+            "id": "F1",
+            "question": "Define natural numbers.",
+            "marks": 2
+          },
+          {
+            "id": "F2",
+            "question": "Give four examples of whole numbers.",
+            "marks": 2
+          },
+          {
+            "id": "F3",
+            "question": "Explain what integers are.",
+            "marks": 2
+          },
+          {
+            "id": "F4",
+            "question": "Classify -6, 0 and 9.",
+            "marks": 3
+          },
+          {
+            "id": "F5",
+            "question": "Give one practical use of negative numbers.",
+            "marks": 1
+          }
+        ],
+        "total_marks": 10,
+        "pass_mark_percent": 60
+      },
+      "evidence_and_mastery": {
+        "required_evidence": [
+          "Completed practice exercises",
+          "Knowledge check results",
+          "Practical application response",
+          "Voice or written explanation",
+          "Learner reflection",
+          "Friday assessment result"
+        ],
+        "mastery_criteria": [
+          "Correctly identifies natural numbers, whole numbers and integers.",
+          "Explains the differences between the three number systems.",
+          "Classifies given numbers accurately.",
+          "Applies number concepts to a practical situation."
+        ],
+        "mastery_threshold_percent": 80,
+        "remediation": "Learners scoring below the mastery threshold should revisit the explanation, study additional examples and complete guided practice before attempting reassessment."
+      }
+    }
+  ]
+}
