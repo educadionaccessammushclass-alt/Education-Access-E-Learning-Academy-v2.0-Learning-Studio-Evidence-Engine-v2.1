@@ -1,0 +1,155 @@
+{
+  "module_id": "EA-F1-MATH-2023",
+  "module_name": "Education Access E-Learning Academy — Form One Mathematics",
+  "display_name": "Form One Mathematics",
+  "subject": "Mathematics",
+  "level": "Form One",
+  "country": "Tanzania",
+  "curriculum_authority": "Tanzania Institute of Education",
+  "controlling_reference": {
+    "document": "Mathematics Syllabus for Ordinary Secondary Education Form I–IV",
+    "year": 2023,
+    "file": "syllabus-reference.md",
+    "machine_readable_map": "syllabus-map.json",
+    "authority_rule": "Where Academy materials differ from the prescribed Form One syllabus, the TIE syllabus takes precedence."
+  },
+  "module_version": "0.1.0",
+  "manifest_schema_version": "1.0.0",
+  "release_status": "development",
+  "language": "en",
+  "maintainer": "Education Access E-Learning Academy",
+  "package_root": "form-one-mathematics",
+  "entry_points": {
+    "curriculum_map": "syllabus-map.json",
+    "curriculum_framework": "curriculum/learning-outcomes.json",
+    "term_plan": "curriculum/term-plan.json",
+    "integration_module": "integration/mathematics-module.js"
+  },
+  "directories": {
+    "curriculum": "curriculum/",
+    "weekly_units": "curriculum/weekly-units/",
+    "assessments": "assessments/",
+    "weekly_assessments": "assessments/weekly-assessments/",
+    "marking_schemes": "assessments/marking-schemes/",
+    "mastery_rubrics": "assessments/mastery-rubrics/",
+    "resources": "resources/",
+    "integration": "integration/"
+  },
+  "instructional_sequence": [
+    {
+      "id": "discover",
+      "label": "Discover",
+      "purpose": "Activate prior knowledge, introduce the context and identify initial understanding."
+    },
+    {
+      "id": "learn",
+      "label": "Learn",
+      "purpose": "Develop mathematical concepts through explicit instruction, explanations and worked examples."
+    },
+    {
+      "id": "practise",
+      "label": "Practise",
+      "purpose": "Build fluency through scaffolded and independent mathematical exercises."
+    },
+    {
+      "id": "knowledge_check",
+      "label": "Knowledge Check",
+      "purpose": "Provide formative checks, feedback and opportunities to address misconceptions."
+    },
+    {
+      "id": "apply",
+      "label": "Apply",
+      "purpose": "Transfer mathematical knowledge to practical, contextualised problems."
+    },
+    {
+      "id": "voice",
+      "label": "Voice",
+      "purpose": "Capture oral explanations of methods, reasoning and mathematical vocabulary."
+    },
+    {
+      "id": "journal",
+      "label": "Journal",
+      "purpose": "Support learner reflection, self-assessment and metacognitive development."
+    },
+    {
+      "id": "friday_assessment",
+      "label": "Friday Assessment",
+      "purpose": "Conduct a weekly assessment aligned with the taught outcomes and assessment criteria."
+    },
+    {
+      "id": "evidence_and_mastery",
+      "label": "Evidence & Mastery",
+      "purpose": "Review learner work and assessment evidence against explicit criteria before recording progression."
+    }
+  ],
+  "curriculum_structure": {
+    "source_periods": 175,
+    "source_period_length_minutes": 40,
+    "source_periods_per_week": 5,
+    "indicative_teaching_weeks": 35,
+    "unit_file_pattern": "curriculum/weekly-units/week-{NN}.json",
+    "assessment_file_pattern": "assessments/weekly-assessments/week-{NN}.json",
+    "marking_scheme_file_pattern": "assessments/marking-schemes/week-{NN}.json",
+    "note": "The 35-week figure is an indicative planning calculation from the TIE period allocation. The Academy term calendar and school timetable must be confirmed before publishing a dated scheme of work."
+  },
+  "technical_contract": {
+    "content_format": "JSON",
+    "text_encoding": "UTF-8",
+    "javascript_module_format": "ES module",
+    "module_must_be_independent": true,
+    "host_platform_changes_required_during_content_development": false,
+    "integration_method": "A controlled loader or import point will be added to the host platform only after module validation.",
+    "offline_first_expectation": true,
+    "data_validation": [
+      "Every weekly unit must reference at least one TIE content block.",
+      "Every learning outcome must be traceable to the TIE syllabus map.",
+      "Every assessment item must identify the outcome or outcomes it assesses.",
+      "Marking schemes must state expected answers and allocation of marks.",
+      "Mastery decisions must be supported by recorded evidence and defined criteria.",
+      "No Form II–IV content may be labelled as Form I syllabus content."
+    ]
+  },
+  "learner_data_policy": {
+    "learner_identity": "Read from the host Academy learner profile; do not hard-code a learner name.",
+    "school_identity": "Read from configurable institution settings; do not hard-code a school name.",
+    "parent_or_guardian_identity": "Read from configurable profile data where authorised; do not hard-code names.",
+    "personal_data_in_curriculum_files": false
+  },
+  "versioning_policy": {
+    "scheme": "Semantic versioning",
+    "major": "Breaking changes to the module data contract or integration interface.",
+    "minor": "New units, resources, assessments or backward-compatible functionality.",
+    "patch": "Corrections, clarifications and non-breaking improvements.",
+    "release_gate": [
+      "TIE alignment review",
+      "Mathematical accuracy review",
+      "Assessment and marking review",
+      "JSON and code validation",
+      "Integration regression test"
+    ]
+  },
+  "current_files": [
+    {
+      "path": "syllabus-map.json",
+      "purpose": "Machine-readable map of Form One TIE content blocks, competences, requirements, methods, resources and assessment criteria.",
+      "status": "draft",
+      "version": "0.1.0"
+    },
+    {
+      "path": "curriculum-manifest.json",
+      "purpose": "Module identity, structure, file conventions, technical contract and governance rules.",
+      "status": "draft",
+      "version": "0.1.0"
+    }
+  ],
+  "development_status": {
+    "syllabus_reference_identification": "complete-draft",
+    "syllabus_map": "created-draft",
+    "manifest": "created-draft",
+    "learning_outcomes_framework": "pending",
+    "term_plan": "pending",
+    "weekly_units": "pending",
+    "assessment_bank": "pending",
+    "integration_module": "pending"
+  }
+}
